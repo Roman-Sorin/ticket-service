@@ -1,0 +1,54 @@
+.eventItem {
+    margin-top: 35px;
+}
+
+.crop-container {
+    width: 400px;
+    height: 200px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.crop-container img {
+    margin-bottom: -180px;
+    position: absolute;
+}
+
+.eventTitleMain {
+    color: #ffc800;
+    font-size: 28px;
+    font-family: 'FuturaFuturis-bold', sans-serif;
+    position: relative;
+    border-bottom: 6px #ffc800 solid;
+    /*background: rgba(0, 0, 0, 0.35);*/
+    /*padding: 5px;*/
+    margin: 130px 26px 0 12px;
+}
+
+.eventDescrMain {
+    color: #ffc800;
+    font-size: 15px;
+    font-family: 'FuturaFuturis-bold', sans-serif;
+    position: relative;
+    margin-left: 12px;
+    margin-right: 26px;
+    /*background: rgba(0, 0, 0, 0.35);*/
+    /*padding: 3px;*/
+    margin-top: 5px;
+}
+
+.dateMain {
+    position: absolute;
+    color: #f3f4f4;
+    right: 60px;
+    top: 15px;
+    font-size: 15px;
+    font-family: 'DINPro-Light', sans-serif;
+    /*background: rgba(0, 0, 0, 0.35);*/
+    /*padding: 5px;*/
+}
+
+.note {
+    margin: 60px auto 30px auto;
+    text-align: center;
+}

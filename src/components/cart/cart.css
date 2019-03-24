@@ -1,0 +1,37 @@
+.reserved-text {
+    color: #ff1632;
+    font-family: FuturaFuturis, sans-serif;
+    text-align: left;
+    font-size: 15px;
+}
+
+.border-cart {
+    border: 1px #868685 solid;
+}
+
+.ml-30px {
+    margin-left: 30px;
+}
+
+.futuraFuturis {
+    font-family: FuturaFuturis, sans-serif;
+}
+
+.clear-cart {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    color: #ffc800;
+    font-family: FuturaFuturis, sans-serif;
+    cursor: pointer;
+}
+
+.border-cart {
+    position: relative;
+}
+
+.pos-cart-agreement {
+    position: absolute;
+    right: 15px;
+    bottom: 10px;
+}

@@ -1,0 +1,9 @@
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    color: #868685;
+    font-size: 45px;
+    font-style: italic;
+}
+
+.halls-schemes {
+    min-height: 470px;
+}

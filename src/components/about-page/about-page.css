@@ -1,0 +1,27 @@
+.blur {
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+    filter: blur(5px);
+}
+
+.cover-blur {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #f3f4f4;
+    margin-top: 25px;
+    background-image: url("./blur_about.jpg");
+    background-size: initial;
+    width: 805px;
+    height: 332px;
+
+}
+
+.title-about {
+    padding: 20px;
+    font-size: 30px;
+    border: #f3f4f4 5px solid;
+    font-family: FuturaFuturis-bold, sans-serif;
+}

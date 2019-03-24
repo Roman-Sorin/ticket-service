@@ -1,0 +1,66 @@
+.login-page {
+    width: 100%;
+}
+
+.fl-login {
+    font-family: FuturaFuturis-bold, sans-serif;
+    font-size: 22px;
+    margin-top: 15px;
+}
+
+.remove-btn {
+    color: #868685;
+    margin-top: 11px;
+    border-bottom: #868685 1px solid;
+    cursor: pointer;
+}
+
+.form-control {
+    font-family: FuturaFuturis, sans-serif;
+    font-size: 19px;
+    border-radius: 0;
+    border: none;
+    border-bottom: #868685 1px solid;
+    width: 80px !important;
+    padding-bottom: 0;
+    padding-left: 0;
+}
+
+.form-control:focus {
+    outline: none;
+    border-bottom: #868685 1px solid;
+    box-shadow: none
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.forgotPass {
+    font-family: FuturaFuturis, sans-serif;
+    font-weight: lighter;
+    color: #ffc800;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.form-btn {
+    text-align: center;
+    background: #868685;
+    color: #f3f4f4;
+    font-family: FuturaFuturis-bold, sans-serif;
+    font-size: 20px;
+    padding: 4px 0;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.form-btn:hover {
+    box-shadow: #ffc800 1px 2px;
+    border-radius: 0 0 3px 3px;
+    background: #696a6d;
+}
+
+.link-no-style:hover {
+    text-decoration-line: none;
+}

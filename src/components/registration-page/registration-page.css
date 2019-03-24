@@ -1,0 +1,61 @@
+.form-control-reg {
+    color: #868685;
+}
+
+.input-reg {
+    margin-bottom: 0;
+    color: #868685;
+}
+
+.show-pass-btn {
+    padding-left: 3px;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+input[type="checkbox"] + label span {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin: -1px 4px 0 0;
+    vertical-align: middle;
+    background: url('./0.svg');
+    cursor: pointer;
+}
+
+input[type="checkbox"]:checked + label span {
+    background: url('./1.svg');
+}
+
+.label-for-checkbox {
+    font-size: 12px;
+    font-family: 'DINPro-Light', sans-serif;
+}
+
+.yellow-text:hover {
+    color: #ffc800;
+}
+
+.form-btn-short {
+    width: 200px;
+}
+
+.red-text {
+    color: #ff1632;
+    font-family: FuturaFuturis-bold, sans-serif;
+    font-size: 18px;
+}
+
+.form-btn-short-disabled {
+    background: #cacaca;
+}
+
+.f35 {
+    font-size: 30px;
+}
+
+.f18 {
+    font-size: 18px;
+}

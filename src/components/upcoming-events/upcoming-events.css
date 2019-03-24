@@ -1,0 +1,65 @@
+.upcomingEventsTitle {
+    color: #ffc800;
+    font-size: 20px;
+    font-family: 'DINPro-Regular', sans-serif;
+    position: relative;
+    padding-top: 33px;
+    padding-left: 6px;
+    padding-bottom: 3px;
+    margin-bottom: 0;
+}
+
+.crop-container-upcoming-events {
+    position: relative;
+    cursor: pointer;
+    width: 210px;
+    overflow: hidden;
+}
+
+.crop-container-upcoming-events img {
+    bottom: 0;
+    position: absolute;
+    width: 210px;
+    margin-bottom: -115px;
+    margin-top: -30px;
+}
+
+.soldOut {
+    background: #ff1632;
+    color: #f3f4f4;
+    padding: 7px 10px 5px 10px;
+    font-size: 9px;
+    font-family: FuturaFuturis, sans-serif;
+    margin-left: 9px;
+}
+
+.buy {
+    background: #84cc25;
+    color: #f3f4f4;
+    width: 61px;
+    padding: 7px 22px 5px 22px;
+    font-size: 9px;
+    font-family: FuturaFuturis, sans-serif;
+    margin-left: 9px;
+}
+
+.descrEvent {
+    width: 210px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.text-left {
+    text-align: left;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    color: #868685;
+    margin-left: 9px;
+}
+
+.text-right {
+    text-align: right;
+    font-size: 13px;
+    color: #868685;
+}

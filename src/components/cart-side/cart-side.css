@@ -1,0 +1,15 @@
+.seat-cart-row {
+    border-bottom: #868685 1px solid;
+}
+
+.seat-cart-font {
+    font-family: DINPro-Regular, sans-serif;
+}
+
+.remove-seat {
+    transition: all 0.2s ease;
+}
+
+.remove-seat:hover {
+    transform: scale(1.1);
+}

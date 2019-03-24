@@ -1,0 +1,11 @@
+.f40 {
+    font-size: 36px;
+    font-family: 'DINPro-Black', sans-serif;
+    text-align: center;
+    height: 60px;
+    border-bottom: #868685 10px solid;
+}
+
+.event-list-component {
+    /*min-height: 500px;*/
+}

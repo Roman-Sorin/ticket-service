@@ -1,0 +1,53 @@
+.extendMenu {
+    height: 275px;
+    background: #696a6d;
+    transition: all 0.8s ease;
+    opacity: 0;
+}
+
+.animated {
+    opacity: 1
+}
+
+.socialIconsExpMenu {
+    color: #f3f4f4;
+    font-size: 38px;
+}
+
+.menuList {
+    list-style: none;
+    font-family: DINPro-Regular, sans-serif;
+    color: #f3f4f4;
+}
+
+.menuListItem {
+    list-style: none;
+    font-family: DINPro-Regular, sans-serif;
+    color: #f3f4f4;
+    transition: all 0.2s ease;
+}
+
+.menuListItem:hover {
+    border-bottom: #f3f4f4 7px solid;
+    text-decoration-line: none;
+    color: #f3f4f4;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+.cross {
+    font-size: 32px;
+    color: #f3f4f4;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.cross:hover {
+    transform: scale(1.2)
+}
+
+.adress {
+    line-height: 21px;
+    font-size: 17px;
+    font-family: 'DINPro-Light', sans-serif;
+}

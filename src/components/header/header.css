@@ -1,0 +1,77 @@
+.menu-line {
+    width: 25px;
+    height: 4px;
+    background: #868685;
+    border-radius: 22%;
+    margin: 4px 0;
+}
+
+.nav-bord {
+    border: none !important;
+}
+
+.nav-bord:focus {
+    outline: none;
+}
+
+.logo-container {
+    background: linear-gradient(to right, #3575b8 15%, #ff1632 90%);
+    height: 90px;
+}
+
+.logoImg {
+    height: 90%;
+    width: 100%;
+}
+
+.middle-sec-header {
+    height: 100%;
+    font-family: 'DINPro-Light', sans-serif;
+    font-size: 17px;
+    color: #868685;
+}
+
+.social {
+    font-size: 22px;
+    color: #868685;
+    padding-right: 0;
+    cursor: pointer;
+}
+
+.social-icon {
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+.social-icon:hover {
+    transform: scale(1.2)
+}
+
+.menu {
+    margin-top: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.menu:hover {
+    transform: scale(1.1)
+}
+
+.link {
+    text-decoration-line: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    color: #868685;
+    margin-right: 10px;
+    font-family: 'DINPro-Regular', sans-serif;
+    font-size: 18px;
+    transition: all 0.2s ease;
+}
+
+.link:hover {
+    border-bottom: #868685 7px solid;
+    color: #07ace8;
+    text-decoration-line: none;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}

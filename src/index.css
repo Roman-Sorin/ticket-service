@@ -1,0 +1,36 @@
+@font-face {
+    font-family: 'DINPro-Black';
+    src: local('DINPro-Black'), url(./fonts/DINPro-Black.otf) format('opentype');
+}
+
+@font-face {
+    font-family: 'DINPro-CondBold';
+    src: local('DINPro-CondBold'), url(./fonts/DINPro-CondBold.otf) format('opentype');
+}
+
+@font-face {
+    font-family: 'DINPro-Light';
+    src: local('DINPro-Light'), url(./fonts/DINPro-Light.otf) format('opentype');
+}
+
+@font-face {
+    font-family: 'DINPro-Regular';
+    src: local('DINPro-Regular'), url(./fonts/DINPro-Regular.otf) format('opentype');
+}
+
+@font-face {
+    font-family: 'FuturaFuturis';
+    src: local('FuturaFuturis'), url(./fonts/FuturaFuturis.OTF) format('opentype');
+}
+
+@font-face {
+    font-family: 'FuturaFuturis-bold';
+    src: local('FuturaFuturis-bold'), url(./fonts/FuturaFuturis-bold.OTF) format('opentype');
+}
+
+body {
+    font-family: DINPro-Light, sans-serif;
+    font-size: 18px;
+    color: #868685;
+    background: #fafafa;
+}
