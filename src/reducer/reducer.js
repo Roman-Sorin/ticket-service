@@ -1,6 +1,5 @@
 const initialState = {
     email: '',
-
     token: '',
 
     menuIsShown: false,
@@ -12,6 +11,12 @@ const initialState = {
     eventsLoading: true,
     events: [],
     eventsError: false,
+    totalCount: 0,
+
+    pagination: {
+        page: 0,
+        hasMoreItems: true
+    },
 
     eventLoading: true,
     event: {},
@@ -50,7 +55,17 @@ const initialState = {
     calendar: {
         from: undefined,
         to: undefined
+    },
+
+    bookLoading: false,
+
+    passRecovery: {
+        loading: false,
+        success: false,
+        error: false,
+        errorMsg: ""
     }
+
 };
 
 export const reducer = (state = initialState, action) => {
@@ -114,6 +129,12 @@ export const reducer = (state = initialState, action) => {
                 eventsError: true,
                 eventsLoading: false
             };
+        case "FETCH_TOTAL_COUNT":
+            return {
+                ...state,
+                totalCount: action.payload
+            };
+
 
         case 'EVENT_REQUEST':
             return {
@@ -196,6 +217,7 @@ export const reducer = (state = initialState, action) => {
             };
 
         case "SEAT_CART_REMOVE": {
+
             let row = action.payload.row;
             let seat = action.payload.seat;
             let index = state.seatsInCart.findIndex(
@@ -297,7 +319,6 @@ export const reducer = (state = initialState, action) => {
                     to: undefined
                 }
             };
-
         case "SET_CALENDAR":
             return {
                 ...state,
@@ -305,6 +326,57 @@ export const reducer = (state = initialState, action) => {
                     ...state.calendar,
                     from: action.payload.from,
                     to: action.payload.to
+                }
+            };
+
+        case "CHANGE_PAGE":
+            return {
+                ...state,
+                pagination: {
+                    ...state.pagination,
+                    page: action.payload
+                }
+            };
+
+        case "CHANGE_MORE_ACTION_STATUS":
+            return {
+                ...state,
+                pagination: {
+                    ...state.pagination,
+                    hasMoreItems: action.payload
+                }
+            };
+        case "SET_BOOK_LOADING":
+            return {
+                ...state,
+                bookLoading: action.payload
+            };
+
+        case "PASS_RECOVERY_LOADING":
+            return {
+                ...state,
+                passRecovery: {
+                    ...state.passRecovery,
+                    loading: action.payload
+                }
+            };
+
+        case "PASS_RECOVERY_SUCCESS":
+            return {
+                ...state,
+                passRecovery: {
+                    ...state.passRecovery,
+                    success: action.payload
+                }
+            };
+        case "PASS_RECOVERY_ERROR":
+            return {
+                ...state,
+                passRecovery: {
+                    ...state.passRecovery,
+                    error: action.payload.error,
+                    errorMsg: action.payload.errorMsg,
+                    loading: false
                 }
             };
 

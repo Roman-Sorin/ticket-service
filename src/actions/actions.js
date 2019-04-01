@@ -37,6 +37,12 @@ export const eventsLoaded = (events) => {
         payload: events
     }
 };
+export const setTotalCount = (total) => {
+    return {
+        type: 'FETCH_TOTAL_COUNT',
+        payload: total
+    }
+};
 export const eventsShowError = () => {
     return {
         type: 'EVENTS_ERROR'
@@ -199,6 +205,46 @@ export const setCalender = (range) => {
             from: range.from,
             to: range.to
         }
+    }
+};
+
+export const changePage = (page) => {
+    return {
+        type: 'CHANGE_PAGE',
+        payload: page
+    }
+};
+
+export const changeMorePageStatus = (bool) => {
+    return {
+        type: 'CHANGE_MORE_ACTION_STATUS',
+        payload: bool
+    }
+};
+
+export const setBookLoading = (bool) => {
+    return {
+        type: 'SET_BOOK_LOADING',
+        payload: bool
+    }
+};
+
+export const setPassRecoveryLoading = (bool) => {
+    return {
+        type: 'PASS_RECOVERY_LOADING',
+        payload: bool
+    }
+};
+export const setPassRecoverySuccess = (bool) => {
+    return {
+        type: 'PASS_RECOVERY_SUCCESS',
+        payload: bool
+    }
+};
+export const passRecoveryError = (error, errorMsg) => {
+    return {
+        type: 'PASS_RECOVERY_ERROR',
+        payload: {error, errorMsg}
     }
 };
 

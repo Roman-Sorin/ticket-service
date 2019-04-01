@@ -36,7 +36,8 @@ class RegistrationPage extends Component {
             return (
                 <div className='row justify-content-center'>
                     <p className='fl-login f35 text-center'>Registration user: <br/> <span
-                        className='yellow-text-bold'>{this.props.email}</span> <br/> was successful</p>
+                        className='yellow-text-bold'>{this.props.email}</span> <br/> was successful. <br/>Check your
+                        e-mail and confirm registration. </p>
                     <div className="w-100"/>
                     <img src={success} alt='successful' width='64' height='64'/>
                     <div className="w-100"/>
@@ -85,8 +86,8 @@ class RegistrationPage extends Component {
                         let password = this.refs.inputPassword1.value;
                         let phoneNumber = this.refs.phone1.value;
 
-                        this.ticketService.registration(email, firstName, gender,
-                            lastName, password, phoneNumber)
+                        this.ticketService.registration(gender, firstName,
+                            lastName, email, password, phoneNumber)
                             .then(() => {
                                 this.props.registrationChangeLoading();
                                 console.log('registration fulfill then ');

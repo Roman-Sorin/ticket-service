@@ -48,7 +48,7 @@ class UpcomingEvents extends Component {
 
             const soldOut = (<span className='soldOut'>SOLD OUT</span>);
             const buy = (<span className='buy'>BUY</span>);
-            let status = +item.availabilityStatus ? buy : soldOut;
+            let status = +item.availabilityStatus ? soldOut : buy;
 
             return (
                 <div key={index}>

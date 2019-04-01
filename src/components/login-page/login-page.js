@@ -28,7 +28,7 @@ class LoginPage extends Component {
             return <Spinner/>
         }
 
-        if (this.props.authResult === 'ok' || this.props.email.length > 0) {
+        if (this.props.authResult === 'ok' || this.props.token.length > 0) {
             return (
                 <div className='row justify-content-center'>
                     <p className='fl-login f35 text-center'>Login user: <br/> <span
@@ -95,17 +95,12 @@ class LoginPage extends Component {
 
                                         this.ticketService.login(email, password)
                                             .then((token) => {
-                                                console.log('fetch fulfill');
-                                                console.log(token);
                                                 this.props.authChangeLoading();
                                                 this.props.authSetStatus('ok');
-                                                console.log(email);
                                                 this.props.setEmail(email);
                                                 this.props.setToken(token);
                                             })
                                             .catch((error) => {
-                                                console.log('fetch reject');
-                                                console.log(error.message);
                                                 this.props.authChangeLoading();
                                                 this.props.authSetStatus('error auth');
                                                 this.props.authSetErrorMsg(error.message);
@@ -138,7 +133,7 @@ class LoginPage extends Component {
                                                }}> </i>
                                         </div>
                                     </div>
-                                    <Link to='recoverPassPage' className='yellow-text'><p
+                                    <Link to='/recovery' className='yellow-text'><p
                                         className='forgotPass'>Forgotten
                                         password?</p></Link>
                                     <button className='form-btn w-100' type="submit"> Login

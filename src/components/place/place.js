@@ -13,12 +13,12 @@ class Place extends Component {
 
     isLocked = (arr, row, seat) => {
         let isRow = arr.findIndex((item) => {
-            return item.row === row;
+            return +item.row === row;
         });
         if (isRow === -1) {
             return false;
         }
-        let index = arr[isRow].seats.findIndex((item) => {
+        let index = arr[isRow].sseats.findIndex((item) => {
             return item === seat;
         });
         return index >= 0;
@@ -35,15 +35,15 @@ class Place extends Component {
         for (let i = 0; i < arr.length; i++) {
 
             let tmpRow = arr[i].rows.find((item) => {
-                return item === row;
+                return +item === row;
             });
 
             if (tmpRow) {
                 obj = arr[i];
-                break;
+                return obj.price;
             }
         }
-        return obj.price;
+
     };
 
     render() {
@@ -65,7 +65,7 @@ class Place extends Component {
             );
         }
 
-        if (event.hall === 2) {
+        if (event.hall === 0) {
             return (
                 <span className={
                     this.isLocked(this.props.hallStructure2ForEvent.lockedSeats, row, seat) ? 'hall-2-place locked' :

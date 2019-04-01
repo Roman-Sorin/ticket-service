@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import './events-list-container.css';
 import EventList from "../event-list/event-list";
+import EventListInfinity from "../delete/event-list-infinity"
 import EventDetails from "../event-details/event-details";
 import {Route, Switch} from "react-router-dom";
 import {withRouter} from "react-router-dom";
@@ -13,7 +14,7 @@ import HallsSchemes from "../halls-schemes/halls-schemes";
 import AboutPage from "../about-page/about-page";
 import Paying from "../paying/paying";
 import SuccessPage from "../success-page/success-page";
-
+import PasswordRecoveryPage from "../password-recovery-page/password-recovery-page";
 
 class EventsListContainer extends Component {
 
@@ -25,7 +26,7 @@ class EventsListContainer extends Component {
                     <Switch>
                         <Route exact path='/' render={() => {
                             return (
-                                <EventList onItemSelected={(id) => {
+                                <EventListInfinity onItemSelected={(id) => {
                                     history.push(`/events/${id}`)
                                 }}/>
                             );
@@ -33,7 +34,7 @@ class EventsListContainer extends Component {
 
                         <Route exact path='/events/' render={() => {
                             return (
-                                <EventList onItemSelected={(id) => {
+                                <EventListInfinity onItemSelected={(id) => {
                                     history.push(`/events/${id}`)
                                 }}/>
                             );
@@ -66,6 +67,8 @@ class EventsListContainer extends Component {
                         <Route path='/paying' component={Paying}/>
 
                         <Route path='/success' component={SuccessPage}/>
+
+                        <Route path='/recovery' component={PasswordRecoveryPage}/>
 
                     </Switch>
                 </div>

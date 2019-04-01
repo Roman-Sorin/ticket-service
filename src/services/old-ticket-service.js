@@ -1,6 +1,6 @@
 export default class TicketService {
 
-    _baseUrl = 'https://ticketserviceapp.herokuapp.com';
+    _baseUrl = 'https://ticket-service.herokuapp.com';
     dataUpcomingEvents = [
         {
             "artist": "Eurovision",
@@ -259,6 +259,7 @@ export default class TicketService {
             }
         ]
     };
+
     getUpcomingEventsDammy = () => {
         return new Promise((resolve, reject) => {
             setTimeout((error) => {
@@ -312,30 +313,31 @@ export default class TicketService {
         });
     };
 
-    registration = async (gender, firstName, lastName, email, password, phoneNumber) => {
+    registration = async (email, firstName, gender, lastName, password, phoneNumber) => {
 
-        let response = await fetch(`${this._baseUrl}/user`, {
+        let response = await fetch(`${this._baseUrl}/registration`, {
             method: "POST",
             headers: {
                 "Content-type": "application/json"
             },
+            async: false,
             body: JSON.stringify({
-                "gender": gender,
-                "firstName": firstName,
-                "lastName": lastName,
                 "email": email,
+                "firstName": firstName,
+                "gender": gender,
+                "lastName": lastName,
                 "password": password,
                 "phoneNumber": phoneNumber
             })
         });
+        console.log(response.status);
 
         if (!response.ok) {
 
             let json = await response.json();
             let errorMsg = '';
-            console.log(json);
+
             for (let prop in json.body) {
-                console.log(json.body[prop][0]);
                 errorMsg += `${json.body[prop][0]}. 
 `;
             }
@@ -354,6 +356,8 @@ export default class TicketService {
                 "password": password
             })
         });
+        console.log(email, password);
+        console.log(response.status);
 
         if (!response.ok) {
             let json = await response.json();
@@ -365,7 +369,7 @@ export default class TicketService {
         return json.token;
     };
     getUpcomingEvents = async (authorization = '') => {
-        let response = await fetch(`${this._baseUrl}/events/2/3`, {
+        let response = await fetch(`${this._baseUrl}/events/upcoming?size=3&page=2`, {
             method: "GET",
             headers: {
                 "Content-type": "application/json",
@@ -377,16 +381,19 @@ export default class TicketService {
             throw new Error('Getting upcoming events isn`t ok');
         }
 
-        return await response.json();
+        let json = await response.json();
+
+        return json.events;
     };
-    getEvents = async (from = 1541384000000, to = 1579073600000, page = 0, size = 2, authorization = '') => {
+    getEvents = async (from = 1541384000000, to = 1579073600000, authorization = '', page = 1, size = 2) => {
         from -= 35940000;
         if (to - from < 86280000) {
             to = from + 86280000;
         } else {
             to += 86280000;
         }
-        let response = await fetch(`${this._baseUrl}/events/bydate/${page}/${size}`, {
+
+        let response = await fetch(`${this._baseUrl}/events?page=${page}&page-size=${size}`, {
             method: "POST",
             headers: {
                 "Content-type": "application/json",
@@ -394,7 +401,8 @@ export default class TicketService {
             },
             body: JSON.stringify({
                 "dateFrom": from,
-                "dateTo": to
+                "dateTo": to,
+                "type": "1"
             })
         });
         if (!response.ok) {
@@ -404,10 +412,10 @@ export default class TicketService {
         }
 
         let json = await response.json();
-        return json;
+        return json.events;
     };
     getEventById = async (id, authorization = '') => {
-        let response = await fetch(`${this._baseUrl}/event/${id}`, {
+        let response = await fetch(`${this._baseUrl}/events/${id}`, {
             method: "GET",
             headers: {
                 "Content-type": "application/json",
@@ -423,67 +431,82 @@ export default class TicketService {
         return await response.json();
     };
     getHallStructureByEventId = async (id, authorization = '') => {
-        let response = await fetch(`${this._baseUrl}/event/${id}/false`, {
+        let response = await fetch(`${this._baseUrl}/hall/${id}/false`, {
             method: "GET",
             headers: {
-                "Content-type": "application/json"
+                "Content-type": "application/json",
+                "Authorization": authorization
             }
         });
-
         if (!response.ok) {
             let json = await response.json();
             throw new Error
             (`Get hall structure by event ID isn\`t ok. ${json.message}.`);
         }
-
         return await response.json();
     };
 
-    _mappingForBook = (arr) => {
-        return arr.map((item) => {
-            return {
-                "row": `${item.row}`,
-                "seats": [item.seat]
-            }
-        });
-    };
-
-    temporaryBook = async (arr, id) => {
-        let response = await fetch(`${this._baseUrl}/event/book`, {
-            method: "POST",
-            headers: {
-                "Content-type": "application/json"
-            },
-            body: JSON.stringify({
-                "eventId": id,
-                "lockedSeats": this._mappingForBook(arr)
-            })
-        });
-        return response;
-    };
-
-    passRecovery = async (email) => {
-        let response = await fetch(`${this._baseUrl}/user/password`, {
-            method: "POST",
-            headers: {
-                "Content-type": "application/json"
-            },
-            body: JSON.stringify({
-                "email": email,
-            })
-        });
-
-        if (!response.ok) {
-
-            let json = await response.json();
-            let errorMsg = '';
-            for (let prop in json.body) {
-                console.log(json.body[prop][0]);
-                errorMsg += `${json.body[prop][0]}. 
-`;
-            }
-
-            throw new Error(`${json.message} ${errorMsg}`);
-        }
-    }
 }
+
+
+// console.log('start ticket-service');
+// const ticketService = new TicketService();
+// ticketService.getHallStructureByEventId(5)
+//     .then((data) => {
+//         console.log("fulfill");
+//         console.log(data)
+//     })
+//     .catch((error) => {
+//         console.log("reject");
+//         console.log(error.message);
+//     });
+//
+// const rowColor = (arr, row) => {
+//     let obj;
+//     for (let i = 0; i < arr.length; i++) {
+//         let tmpRow = arr[i].rows.find((item) => {
+//             return item === row;
+//         });
+//         if (tmpRow) {
+//             obj = arr[i];
+//             break;
+//         }
+//     }
+//     return obj.color;
+// };
+//
+// let arr = [
+//     {
+//         "color": "#faedac",
+//         "price": 280,
+//         "rows": [
+//             1, 2, 3
+//         ]
+//     },
+//     {
+//         "color": "#fbdada",
+//         "price": 150,
+//         "rows": [
+//             4, 5, 6
+//         ]
+//     },
+//     {
+//         "color": "#d8f0c3",
+//         "price": 120,
+//         "rows": [
+//             7, 8, 9
+//         ]
+//     },
+//     {
+//         "color": "#ffd9b0",
+//         "price": 90,
+//         "rows": [
+//             10, 11, 12, 13, 14, 15
+//         ]
+//     }
+// ];
+//
+// console.log(rowColor(arr, 5));
+// console.log(rowColor(arr, 10));
+// console.log(rowColor(arr, 15));
+// console.log(rowColor(arr, 20));

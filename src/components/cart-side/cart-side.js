@@ -1,23 +1,25 @@
 import React, {Component} from "react";
 import './cart-side.css';
 import {connect} from "react-redux";
-import {seatsInCartRemove} from "../../actions/actions";
-import {Link} from "react-router-dom";
+import {seatsInCartRemove, setBookLoading} from "../../actions/actions";
+import TicketService from "../../services/ticket-service";
+import {withRouter} from "react-router-dom";
 
 class CartSide extends Component {
+
+    ticketService = new TicketService();
 
     ticketPrice = (arr, row) => {
         let obj;
         for (let i = 0; i < arr.length; i++) {
             let tmpRow = arr[i].rows.find((item) => {
-                return item === row;
+                return +item === row;
             });
             if (tmpRow) {
                 obj = arr[i];
-                break;
+                return obj.price;
             }
         }
-        return obj.price;
     };
 
     seatsRender = (arr) => {
@@ -39,7 +41,7 @@ class CartSide extends Component {
     };
 
     render() {
-        let {seatsInCart: seats, totalCost} = this.props;
+        let {seatsInCart: seats, totalCost, setBookLoading} = this.props;
 
         return (
             <React.Fragment>
@@ -54,10 +56,20 @@ class CartSide extends Component {
                     <span className='ml-3 seat-cart-font'>{seats.length} tickets</span>
                     <span className='mr-3 seat-cart-font'>€{totalCost}</span>
                 </div>
-                <Link to='/shopping-cart'>
-                    <button className='form-btn w-100 mt-2 pt-2'> TO THE CART
-                    </button>
-                </Link>
+                <button className='form-btn w-100 mt-2 pt-2' onClick={
+                    () => {
+                        setBookLoading(true);
+                        this.ticketService.temporaryBook(seats, this.props.event.eventId)
+                            .then(() => {
+                                setBookLoading(false);
+                                this.props.history.push('/shopping-cart')
+                            })
+                            .catch((error) => {
+                                console.log(error);
+                            })
+                    }
+                }> TO THE CART
+                </button>
             </React.Fragment>
         );
     }
@@ -74,7 +86,7 @@ const mapStateToProps = (state) => {
 };
 
 const mapDispatchToProps = {
-    seatsInCartRemove
+    seatsInCartRemove, setBookLoading
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(CartSide);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(CartSide));

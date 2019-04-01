@@ -1,23 +1,37 @@
 import React, {Component} from "react";
-import './event-list.css';
 import {connect} from "react-redux";
-import {eventsLoaded, eventsRequest, eventsShowError} from "../../actions/actions";
+import {
+    eventsLoaded,
+    eventsRequest,
+    eventsShowError,
+    changePage,
+    changeMorePageStatus,
+    resetCalender,
+    setTotalCount
+} from "../../actions/actions";
 import Spinner from "../spinner/spinner";
 import ErrorIndicator from "../error-indicator/error-indicator";
 import TicketService from "../../services/ticket-service";
 import Link from "react-router-dom/es/Link";
+import './infinity-list.css';
 
-class EventList extends Component {
+class EventListInfinity extends Component {
 
     months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-
+    static page = 0;
     ticketService = new TicketService();
 
-    updateEvents = () => {
+    updateEvents = (page, size = 4) => {
         this.props.eventsRequest();
         let {from, to} = this.props.calendar;
+        from = typeof from !== 'undefined' ? from : '01-01-2018';
+        to = typeof to !== 'undefined' ? to : '01-01-2020';
 
-        this.ticketService.getEvents(Date.parse(from), Date.parse(to), this.props.token)
+        this.ticketService.getEvents(Date.parse(from), Date.parse(to), 0, 99999999)
+            .then((data) => {
+                this.props.setTotalCount(data.length / 4);
+                return this.ticketService.getEvents(Date.parse(from), Date.parse(to), page, size, this.props.token)
+            })
             .then((data) => {
                 this.props.eventsLoaded(data);
             })
@@ -27,12 +41,17 @@ class EventList extends Component {
     };
 
     componentDidMount() {
-        this.updateEvents();
+        this.updateEvents(0);
+    }
+
+    componentWillUnmount() {
+        EventListInfinity.page = 0;
     }
 
     componentDidUpdate(prevProps, prevState, snapshot) {
         if (prevProps.calendar.from !== this.props.calendar.from || prevProps.calendar.to !== this.props.calendar.to) {
-            this.updateEvents();
+            EventListInfinity.page = 0;
+            this.updateEvents(0);
         }
     }
 
@@ -61,7 +80,6 @@ class EventList extends Component {
     render() {
 
         let {events, eventsLoading, eventsError} = this.props;
-        console.log(events);
         if (eventsLoading) {
             return <Spinner/>
         }
@@ -71,7 +89,12 @@ class EventList extends Component {
         }
 
         let content = events.length === 0 ? (
-            <div className='f35 note'>There are no events in this dates</div>) : this.setItems(events);
+            <div className='f35 note'>
+                <p>No events</p>
+                <div className="form-btn" onClick={this.props.resetCalender}>
+                    Reset dates
+                </div>
+            </div>) : this.setItems(events);
 
         return (
             <React.Fragment>
@@ -81,6 +104,30 @@ class EventList extends Component {
                     </div>
                     <div className="w-100"/>
                     {content}
+                    <div className='row w-100'>
+                        <div className='col-12 d-flex justify-content-center'>
+
+                            {EventListInfinity.page !== 0 &&
+                            <div className='prev-btn' onClick={
+                                () => {
+                                    EventListInfinity.page--;
+                                    this.updateEvents(EventListInfinity.page);
+                                }
+                            }>Prev page
+                            </div>}
+
+                            {EventListInfinity.page < this.props.totalCount - 1 &&
+                            (<div className='form-btn next-btn'
+                                  onClick={
+                                      () => {
+                                          EventListInfinity.page++;
+                                          this.updateEvents(EventListInfinity.page);
+                                      }
+                                  }>Next page
+                            </div>)}
+
+                        </div>
+                    </div>
                 </div>
             </React.Fragment>
         );
@@ -93,14 +140,21 @@ const mapStateToProps = (state) => {
         events: state.events,
         eventsLoading: state.eventsLoading,
         eventsError: state.eventsError,
-        token: state.token
+        token: state.token,
+        page: state.pagination.page,
+        hasMoreItems: state.pagination.hasMoreItems,
+        totalCount: state.totalCount
     }
 };
 
 const mapDispatchToProps = {
     eventsRequest,
     eventsLoaded,
-    eventsShowError
+    eventsShowError,
+    changePage,
+    changeMorePageStatus,
+    resetCalender,
+    setTotalCount
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(EventList);
+export default connect(mapStateToProps, mapDispatchToProps)(EventListInfinity);

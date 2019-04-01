@@ -26,8 +26,7 @@ class Tickets extends Component {
     }
 
     render() {
-
-        if (this.props.eventLoading) {
+        if (this.props.eventLoading || this.props.bookLoading) {
             return <Spinner/>
         }
 
@@ -65,7 +64,8 @@ const mapStateToProps = (state) => {
         event: state.event,
         eventLoading: state.eventLoading,
         eventError: state.eventError,
-        token: state.token
+        token: state.token,
+        bookLoading: state.bookLoading
     }
 };
 

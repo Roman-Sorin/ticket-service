@@ -28,7 +28,6 @@ class Hall extends Component {
             this.ticketService.getHallStructureByEventId(this.props.event.eventId)
                 .then(
                     (data) => {
-
                         this.props.setHallStructure(data.priceRanges, data.lockedSeats);
                     }
                 ).catch(
@@ -39,7 +38,7 @@ class Hall extends Component {
             )
         }
 
-        if (this.props.event.hall === 2) {
+        if (this.props.event.hall === 0) {
             this.props.hallStructure2Request();
             this.ticketService.getHallStructureByEventId(this.props.event.eventId)
                 .then(
@@ -57,39 +56,34 @@ class Hall extends Component {
     }
 
     rowColor = (arr, row) => {
-
         let obj;
         for (let i = 0; i < arr.length; i++) {
             let tmpRow = arr[i].rows.find((item) => {
-                return item === row;
+                return +item === row;
             });
             if (tmpRow) {
                 obj = arr[i];
-                break;
+                return obj.color;
             }
         }
-        return obj.color;
     };
 
     ticketPrice = (arr, row) => {
         let obj;
         for (let i = 0; i < arr.length; i++) {
-
             let tmpRow = arr[i].rows.find((item) => {
-                return item === row;
+                return +item === row;
             });
-
             if (tmpRow) {
                 obj = arr[i];
-                break;
+                return obj.price;
             }
         }
-        return obj.price;
     };
 
     render() {
-
         let {hall, hallStructureForEvent, hallStructure2ForEvent} = this.props;
+
 
         if (hall === 1) {
             if (hallStructureForEvent.hallStructureLoading) {
@@ -346,7 +340,7 @@ class Hall extends Component {
             );
         }
 
-        if (hall === 2) {
+        if (hall === 0) {
 
             if (hallStructure2ForEvent.hallStructureLoading) {
                 return <Spinner/>
@@ -1060,7 +1054,8 @@ const mapStateToProps = (state) => {
         seatsInCart: state.seatsInCart,
         event: state.event,
         hallStructureForEvent: state.hallStructureForEvent,
-        hallStructure2ForEvent: state.hallStructure2ForEvent
+        hallStructure2ForEvent: state.hallStructure2ForEvent,
+
     }
 };
 

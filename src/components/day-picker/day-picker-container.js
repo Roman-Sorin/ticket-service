@@ -5,13 +5,14 @@ import 'react-day-picker/lib/style.css';
 import {resetCalender, setCalender} from "../../actions/actions";
 import {connect} from "react-redux";
 import {withRouter} from "react-router-dom";
-
+import EventListInfinity from "../delete/event-list-infinity";
 
 class DayPickerContainer extends Component {
 
     WEEKDAYS_SHORT = ['S', 'M', 'T', 'W', 'T', 'F', 'S'];
 
     handleDayClick = (day) => {
+        EventListInfinity.page = 1;
         const range = DateUtils.addDayToRange(day, this.props.calendar);
         this.props.setCalender(range);
         if (this.props.calendar.from) {

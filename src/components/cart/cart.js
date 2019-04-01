@@ -13,16 +13,14 @@ class Cart extends Component {
     ticketPrice = (arr, row) => {
         let obj;
         for (let i = 0; i < arr.length; i++) {
-
             let tmpRow = arr[i].rows.find((item) => {
-                return item === row;
+                return +item === row;
             });
             if (tmpRow) {
                 obj = arr[i];
-                break;
+                return obj.price;
             }
         }
-        return obj.price;
     };
 
     seatsRender = (arr) => {

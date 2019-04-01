@@ -36,7 +36,7 @@ class Prices extends Component {
             );
         }
 
-        if(this.props.event.hall === 2){
+        if(this.props.event.hall === 0){
             let {priceRanges2} = this.props;
             if (priceRanges2.length === 0) {
                 return <Spinner/>

@@ -23,7 +23,6 @@ class EventDetails extends Component {
     };
 
     ticketService = new TicketService();
-
     componentDidMount() {
         this.updateEvent();
     }
