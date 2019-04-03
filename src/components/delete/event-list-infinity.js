@@ -60,7 +60,7 @@ class EventListInfinity extends Component {
             let date = new Date(item.eventStart);
             return (
                 <div
-                    className='col-6 eventItem crop-container'
+                    className='col-md-6 col-12 eventItem crop-container'
                     key={index} onClick={
                     () => {
                         this.props.onItemSelected(item.eventId);
@@ -98,7 +98,7 @@ class EventListInfinity extends Component {
 
         return (
             <React.Fragment>
-                <div className='row w-100'>
+                <div className='row w-100 justify-content-center'>
                     <div className='col-12 d-flex justify-content-center'>
                         <Link to='/events/' className='link f40'>EVENTS</Link>
                     </div>

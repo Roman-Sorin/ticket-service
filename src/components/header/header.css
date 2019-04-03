@@ -75,3 +75,36 @@
     padding-bottom: 0;
     margin-bottom: 0;
 }
+
+@media (max-width: 575px) {
+
+    .middle-sec-header {
+        display: none;
+    }
+
+
+    .social {
+        display: none !important;
+    }
+
+    .menu {
+        width: 100%;
+        margin-right: 10px !important;
+    }
+
+    .menu-container {
+        width: 100% !important;
+        justify-content: flex-end;
+        display: flex;
+        margin-top: 0 !important;
+    }
+
+    .menu-line {
+        width: 35px;
+        height: 6px;
+        background: #868685;
+        border-radius: 22%;
+        margin: 5px 0;
+    }
+
+}

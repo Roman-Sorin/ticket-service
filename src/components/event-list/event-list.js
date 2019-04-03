@@ -18,9 +18,11 @@ class EventList extends Component {
         let {from, to} = this.props.calendar;
 
         this.ticketService.getEvents(Date.parse(from), Date.parse(to), this.props.token)
+
             .then((data) => {
                 this.props.eventsLoaded(data);
             })
+
             .catch(() => {
                 this.props.eventsShowError();
             })
@@ -41,7 +43,7 @@ class EventList extends Component {
             let date = new Date(item.eventStart);
             return (
                 <div
-                    className='col-6 eventItem crop-container'
+                    className='col-lg-6 col-12 eventItem crop-container'
                     key={index} onClick={
                     () => {
                         this.props.onItemSelected(item.eventId);

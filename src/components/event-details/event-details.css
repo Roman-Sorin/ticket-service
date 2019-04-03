@@ -53,13 +53,47 @@
 }
 
 .scale {
-   transition: all 0.5s ease;
+    transition: all 0.5s ease;
 }
 
 .scale:hover {
-    transform: scale(1.05) translateX(6px);
+    transform: scale(1.1) translateX(2px);
 }
 
 .pointer {
     cursor: pointer;
+}
+
+.buy-ticket-btn {
+    border: 1px #ffc800 solid;
+    border-radius: 5px;
+    text-align: center;
+    padding-top: 5px;
+    width: 50%;
+    font-size: 30px;
+}
+
+@media (max-width: 575px) {
+    .event-description {
+        max-width: 100vw;
+    }
+
+    .w-100-wv {
+        max-width: 100vw;
+    }
+
+    .poster {
+        padding: 0;
+    }
+
+    .rightSideMainArtist {
+        text-align: center;
+        font-size: 25px;
+    }
+
+    .buy-ticket-btn {
+        font-size: 30px;
+        text-align: center;
+        width: 100%;
+    }
 }

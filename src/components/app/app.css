@@ -6,7 +6,12 @@
 
 .titles-left-bar {
     text-align: left;
+    margin-left: 25px;
 }
 
 .main-area {
+}
+
+.w1200 {
+    justify-content: center;
 }

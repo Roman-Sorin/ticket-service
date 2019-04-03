@@ -9,15 +9,20 @@
     font-size: 15px;
 }
 
+.tips-sm {
+    display: none;
+}
+
 .DayPicker-wrapper {
     padding-bottom: 0;
 }
+
 
 .DayPicker-Day--selected {
     -background-color: #07ace8 !important;
 }
 
-.fa-arrow-up {
+.fa-arrow-down, .fa-arrow-up {
     font-size: 25px;
     text-align: center;
 }
@@ -79,4 +84,31 @@
 .Selectable .DayPicker-Day--end {
     border-top-right-radius: 50% !important;
     border-bottom-right-radius: 50% !important;
+}
+
+
+@media (max-width: 575px) {
+
+    .RangeExample {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .DayPicker-wrapper {
+        font-size: 22px;
+    }
+
+    .tips-sm {
+        margin-top: 15px;
+        display: block;
+    }
+
+    .tips-lg {
+        display: none;
+    }
+
+    .h290 {
+        height: 280px;
+    }
 }

@@ -33,4 +33,11 @@ body {
     font-size: 18px;
     color: #868685;
     background: #fafafa;
+    -min-width: 400px;
+}
+
+@media (max-width: 575px) {
+    .media-sm-none {
+        display: none;
+    }
 }

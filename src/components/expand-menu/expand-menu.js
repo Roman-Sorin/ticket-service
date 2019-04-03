@@ -26,10 +26,13 @@ class ExtendMenu extends Component {
             <div className={clas}>
                 <div className="container">
                     <div className="row">
-                        <div className="col-3 mt-5">
-                            <Link to='/'><img src={logo} alt='logo' className='mr-5' onClick={this.props.hideMenu}/></Link>
+
+                        <div className="col-lg-3 col-7 mt-1 mt-lg-5">
+                            <Link to='/'><img src={logo} alt='logo' className='mr-0 mr-lg-5'
+                                              onClick={this.props.hideMenu}/></Link>
                         </div>
-                        <div className="col-6">
+
+                        <div className="col-6 media-sm-none">
                             <div className="row">
                                 <span className='mt-3'>Berlin City Hall | Events and Tickets</span>
                             </div>
@@ -41,7 +44,7 @@ class ExtendMenu extends Component {
                                 <i className="fa fa-odnoklassniki m-2 social-icon"> </i>
                                 <i className="fa fa-rss m-2 social-icon"> </i>
                             </div>
-                            <div className="w-100"> </div>
+                            <div className="w-100"/>
                             <div className="row">
                                 <span className='mt-3 adress'>Berlin City Hall
                                     <br/> Freudstasse 69, 10117 Berlin
@@ -49,13 +52,16 @@ class ExtendMenu extends Component {
                                     <br/> Fax.: 030 2223355
                                     <br/> Email: info@bch.de
                                 </span>
-
-
                             </div>
                         </div>
-                        <div className="col-2">
-                            <div className="row">
-                                <ul className='menuList text-white mt-5'>
+
+                        <div className="col-4 mt-lg-5 mt-2 d-lg-none cross-sm">
+                            <i className="fa fa-times cross-sm" onClick={this.props.hideMenu}> </i>
+                        </div>
+
+                        <div className="col-lg-2 col-12">
+                            <div className="row justify-content-lg-end justify-content-end align-content-start">
+                                <ul className='menuList text-white mt-lg-5'>
                                     <li className='mb-2'><Link to='/login' className='menuListItem'
                                                                onClick={this.props.hideMenu}>LOGIN/OUT</Link>
                                     </li>
@@ -72,7 +78,7 @@ class ExtendMenu extends Component {
                                 </ul>
                             </div>
                         </div>
-                        <div className="col-1 mt-5">
+                        <div className="col-1 mt-lg-5 media-sm-none">
                             <i className="fa fa-times cross" onClick={this.props.hideMenu}> </i>
                         </div>
                     </div>

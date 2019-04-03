@@ -63,3 +63,28 @@
     font-size: 13px;
     color: #868685;
 }
+
+@media (max-width: 575px) {
+
+    .crop-container-upcoming-events {
+        height: 130px;
+        width: 100%;
+    }
+
+    .crop-container-upcoming-events img {
+        width: 100%;
+    }
+
+    .upcomming-events-container {
+        width: 70%;
+    }
+
+    .upcomingEventsTitle {
+        padding-top: 100px;
+    }
+
+    .descrEvent {
+        width: 100%;
+    }
+
+}

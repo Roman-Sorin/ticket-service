@@ -32,27 +32,29 @@ class App extends Component {
                 <ExtendMenu/>
                 }
                 <div className='container'>
-                    <div className="row">
-                        <div className='col-3 mt-5'>
-                            <div className="row justify-content-center mr-4">
-                                <h2 className='titles titles-left-bar'>Calendar</h2>
+                    <div className="row w1200">
+
+                        <div className='col-lg-3 col-12 mt-lg-5 mt-2 order-lg-0 order-1'>
+                            <div className="row justify-content-center mr-lg-4 mr-0">
                                 <DayPickerContainer/>
-                                <h2 className='titles titles-left-bar mt-3 ml-0'>Upcoming Events</h2>
                                 <UpcomingEvents/>
                             </div>
                         </div>
-                        <div className="col-9">
+
+                        <div className="col-lg-9 col-12">
                             <div className="row main-area justify-content-center">
                                 <EventsListContainer/>
                             </div>
-                            <div className="row footer">
+
+                            <div className="row footer-lg">
                                 <Footer/>
                             </div>
                         </div>
                     </div>
-
                 </div>
-
+                <div className="row footer-sm justify-content-center">
+                    <Footer/>
+                </div>
             </div>
         );
     }

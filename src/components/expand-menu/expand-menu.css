@@ -51,3 +51,36 @@
     font-size: 17px;
     font-family: 'DINPro-Light', sans-serif;
 }
+
+
+@media (max-width: 575px) {
+    .menuList {
+        padding-left: 0;
+    }
+
+    .cross-sm {
+        margin-top: 15px;
+        font-size: 55px;
+        text-align: right;
+    }
+
+    .menuList {
+        margin-top: 20px;
+        text-align: center;
+        font-size: 25px;
+        width: 100%;
+    }
+
+    .extendMenu {
+        height: 375px;
+        padding-left: 0;
+    }
+
+    .menuList > li {
+        margin-bottom: 12px !important;
+    }
+
+    .event-list-component {
+        padding: 0;
+    }
+}

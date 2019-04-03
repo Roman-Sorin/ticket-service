@@ -23,6 +23,7 @@ class EventDetails extends Component {
     };
 
     ticketService = new TicketService();
+
     componentDidMount() {
         this.updateEvent();
     }
@@ -56,13 +57,15 @@ class EventDetails extends Component {
 
         let date = new Date(event.eventStart);
         return (
-            <div className='row'>
+            <div className='row w-100-wv'>
                 <div className='col-12 d-flex justify-content-center'>
                     <Link to='/events/' className='link f40'>EVENTS</Link>
                 </div>
+
                 <div className="w-100"/>
-                <div className="col-6 mt-4">
-                    <img src={event.images[0]} alt='poster'/>
+
+                <div className="col-lg-6 col-12 mt-4 poster">
+                    <img src={event.images[0]} alt='poster' className='w-100-wv'/>
                     <h2 className='eventTitleMain-single'> {event.artist}</h2>
                     <h4 className='eventDescrMain-single'> {event.eventName}</h4>
                     <h5 className='dateMain-single'>
@@ -70,7 +73,7 @@ class EventDetails extends Component {
                     </h5>
                 </div>
 
-                <div className="col-6 mt-4">
+                <div className="col-lg-6 col-12 mt-4 event-description">
                     <h5 className='rightSideMainArtist'>{event.artist}</h5>
                     <p className='rightSideMainDescr'>{event.description}</p>
                     <h5 className='rightSideMainArtist'>Date:
@@ -83,17 +86,19 @@ class EventDetails extends Component {
 
                     <h5 className='rightSideMainArtist'>Tickets available -
                         <span
-                            className='yellow-text'> {event.ticketsAvailable}
+                            // className='yellow-text'> {event.ticketsAvailable}
+                            className='yellow-text'> {189}
                         </span>
                     </h5>
 
                     <h5 className='rightSideMainArtist'>Price rang:
                         <span
-                            className='yellow-text'> €{event.minPrice} - €{event.maxPrice}
+                            // className='yellow-text'> €{event.minPrice} - €{event.maxPrice}
+                            className='yellow-text'> €{100} - €{260}
                         </span>
                     </h5>
 
-                    <h4 className='yellow-text-bold scale pointer' onClick={
+                    <h4 className='yellow-text-bold scale pointer buy-ticket-btn' onClick={
                         () => {
                             history.push(`/events/${event.eventId}/tickets`)
                         }

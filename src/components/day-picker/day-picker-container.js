@@ -29,6 +29,33 @@ class DayPickerContainer extends Component {
         const modifiers = {start: from, end: to};
         return (
             <div className="RangeExample">
+                <h2 className='titles titles-left-bar media-sm-none'>Calendar</h2>
+                <div className='ml-3 tips tips-sm order-0 order-lg-1'>
+                    {!from && !to && (
+                        <div>
+
+                            <div className="w-100"/>
+                            <span> Select the <span className=''>first</span> day for searching events.</span>
+                            <i className="fa fa-arrow-down w-100"/>
+                        </div>)}
+
+                    {from && !to && (
+                        <div>
+                            <div className="w-100"/>
+                            <span> Select the <span className=''>last</span> day for searching events.</span>
+                            <i className="fa fa-arrow-down w-100"/>
+                        </div>)}
+
+                    {from && to && `Events from ${from.toLocaleDateString()} to
+                        ${to.toLocaleDateString()}`}{' '}
+
+                    {from &&
+                    to && (
+                        <div className="form-btn" onClick={this.handleResetClick}>
+                            Reset dates
+                        </div>
+                    )}
+                </div>
                 <DayPicker
                     className="Selectable h290"
                     weekdaysShort={this.WEEKDAYS_SHORT}
@@ -36,17 +63,20 @@ class DayPickerContainer extends Component {
                     modifiers={modifiers}
                     onDayClick={this.handleDayClick}
                 />
-                <div className='ml-3 tips'>
+                <div className='ml-3 tips tips-lg order-0 order-lg-1'>
                     {!from && !to && (
-                        <div><i className="fa fa-arrow-up w-100"/>
+                        <div>
+
                             <div className="w-100"/>
                             <span> Select the <span className=''>first</span> day for searching events.</span>
+                            <i className="fa fa-arrow-up w-100"/>
                         </div>)}
 
                     {from && !to && (
-                        <div><i className="fa fa-arrow-up w-100"/>
+                        <div>
                             <div className="w-100"/>
                             <span> Select the <span className=''>last</span> day for searching events.</span>
+                            <i className="fa fa-arrow-up w-100"/>
                         </div>)}
 
                     {from && to && `Events from ${from.toLocaleDateString()} to

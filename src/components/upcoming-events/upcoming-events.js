@@ -83,7 +83,8 @@ class UpcomingEvents extends Component {
         }
 
         return (
-            <div>
+            <div className='upcomming-events-container'>
+                <h2 className='titles titles-left-bar mt-3 ml-0'>Upcoming Events</h2>
                 {this.setItems(upcomingEvents)}
             </div>
         );
