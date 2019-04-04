@@ -43,13 +43,13 @@ class Tickets extends Component {
                 <div className='col-12 d-flex justify-content-center'>
                     <div className='link f40 pointer'>TICKETS</div>
                 </div>
-                <p className='fl-login'>{event.artist} | {event.eventName}
+                <p className='fl-login text-center text-md-left'>{event.artist} | {event.eventName}
                     | {date.getDate()} {this.months[date.getMonth()]} {date.getFullYear()}</p>
-                <div className="row justify-content-between mt-2">
-                    <div className="col-8 hall-container">
+                <div className="row justify-content-between mt-2 w-100-wv mx-0">
+                    <div className="col-md-8 hall-container w-100-wv">
                         <Hall hall={event.hall}/>
                     </div>
-                    <div className="col-3 cart-container">
+                    <div className="col-md-3 cart-container w-100-wv">
                         <Prices/>
                         <CartSide/>
                     </div>

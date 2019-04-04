@@ -35,3 +35,20 @@
     right: 15px;
     bottom: 10px;
 }
+
+@media (max-width: 575px) {
+    .pos-cart-agreement {
+        margin-top: 15px;
+        position: relative;
+    }
+
+    .shopping-cart-title {
+        padding: 0;
+        margin: 0;
+    }
+
+    .link.f40 {
+        margin: 0;
+    }
+
+}

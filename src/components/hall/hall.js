@@ -95,15 +95,15 @@ class Hall extends Component {
             }
 
             return (
-                <div className='row justify-content-center'>
+                <div className='row justify-content-center w-100-wv'>
                     <p className='fl-hall'>BUNHE</p>
-                    <div className='d-flex justify-content-between w-100 title-hall-row row'>
+                    <div className='d-flex justify-content-between w-100-wv title-hall-row row'>
                         <span className='natau'>Natausgang</span>
                         <span className='natau'>Natausgang</span>
                         <div className="w-100"/>
-                        <div className='hall1 col-12'>
-                            <div className='row justify-content-center'>
-                                <p className={'hall-row'}
+                        <div className='hall1 col-12 w-100-wv'>
+                            <div className='row justify-content-center w-100-wv'>
+                                <p className='hall-row'
                                    style={{background: this.rowColor(hallStructureForEvent.priceRanges, 1)}}>
                                     <Place row={1} seat={'1L'} place={1}/>
                                     <Place row={1} seat={'2L'} place={2}/>

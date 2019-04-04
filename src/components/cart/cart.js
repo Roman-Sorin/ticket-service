@@ -55,8 +55,8 @@ class Cart extends Component {
 
         if (Object.keys(event).length === 0) {
             return (
-                <div className='row justify-content-center'>
-                    <h1 className='futuraFuturis mt-5'>Your shopping cart is empty</h1>
+                <div className='row justify-content-center w-100-wv'>
+                    <h1 className='futuraFuturis mt-5 text-md-left text-center'>Your shopping cart is empty</h1>
                     <div className="w-100"/>
                     <img src={emptyCart} alt={'empty cart'} className={'mt-4'} width={64} height={64}/>
                     <div className="w-100"/>
@@ -70,8 +70,8 @@ class Cart extends Component {
 
         if (this.props.seatsInCart.length === 0) {
             return (
-                <div className='row justify-content-center'>
-                    <h1 className='futuraFuturis mt-5'>Your shopping cart is empty</h1>
+                <div className='row justify-content-center w-100-wv'>
+                    <h1 className='futuraFuturis mt-5 text-md-left text-center'>Your shopping cart is empty</h1>
                     <div className="w-100"/>
                     <img src={emptyCart} alt={'empty cart'} className={'mt-4'} width={64} height={64}/>
                     <div className="w-100"/>
@@ -85,25 +85,30 @@ class Cart extends Component {
 
         return (
             <div className='row w-100'>
-                <div className='row justify-content-center w-100'>
-                    <div className='col-auto'><Link to='/shopping-cart' className='link f40'>SHOPPING CART</Link></div>
+                <div className='row justify-content-center w-100 m-0 p-0'>
+                    <div className='col-auto shopping-cart-title'><Link to='/shopping-cart' className='link f40'>SHOPPING CART</Link></div>
                 </div>
                 <div className="w-100"/>
-                <div className='reserved-text row justify-content-left mt-5'>
-                    <div className='col-12'> The tickets shown here have now been reserved for you for 10 minutes.</div>
+                <div className='reserved-text row justify-content-left mt-5 mx-0'>
+                    <div className='col-12 w-100-wv text-md-left text-center'> The tickets shown here have now been
+                        reserved for you for 10
+                        minutes.
+                    </div>
                 </div>
-                <div className='row w-100 border-cart p-4'>
+                <div className='row w-100 border-cart p-4 m-0'>
                     <div>
-                        <p className='fl-login ml-3'>{event.artist} | {event.eventName}
+                        <p className='fl-login ml-md-3 mx-0 text-md-left text-center'>{event.artist} | {event.eventName}
                             | {date.getDate()} {this.months[date.getMonth()]} {date.getFullYear()}</p>
-                        <div className='row col-4'>
-                            <span className=''>Row</span>
-                            <span className='ml-30px'>Place</span>
+                        <div className='row col-md-4 col-12'>
+                            <div className='col-md-9 col-7 d-flex justify-content-between p-0'>
+                                <span className=''>Row</span>
+                                <span className='ml-30px'>Place</span>
+                            </div>
                         </div>
-                        <div className='col-4 px-0'>
+                        <div className='col-md-4 col-12 px-0'>
                             {this.seatsRender(this.props.seatsInCart)}
                         </div>
-                        <div className='row justify-content-between col-4 mt-4'>
+                        <div className='row justify-content-between col-md-4 col-12 mt-4'>
 
                             <span className=''>{seats.length} tickets</span>
                             <span className=''>€{totalCost}</span>
@@ -115,7 +120,7 @@ class Cart extends Component {
                                 history.push('/paying');
                             }}>
 
-                            <button type='submit' className='form-btn col-4'> PAY
+                            <button type='submit' className='form-btn col-md-4 col-12'> PAY
                             </button>
 
 

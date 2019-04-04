@@ -7,17 +7,17 @@ import hall_2 from './003.png'
 export default class HallsSchemes extends Component {
     render() {
         return (
-            <div className={'row halls-schemes'}>
+            <div className='row halls-schemes w-100-wv'>
                 <div className='col-12 d-flex justify-content-center '>
                     <Link to='/halls-schemes' className='link f40 mr-md-5'>HALLS SCHEMES</Link>
                 </div>
                 <div id="carouselExampleFade" className="carousel slide carousel-fade" data-ride="carousel">
                     <div className="carousel-inner">
                         <div className="carousel-item active">
-                            <img src={hall_1} className="d-block w-100" alt="hall 1"/>
+                            <img src={hall_1} className="d-block w-100-wv" alt="hall 1"/>
                         </div>
                         <div className="carousel-item">
-                            <img src={hall_2} className="d-block w-100" alt="hall 2"/>
+                            <img src={hall_2} className="d-block w-100-wv" alt="hall 2"/>
                         </div>
                     </div>
                     <a className="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">

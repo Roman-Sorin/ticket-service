@@ -45,9 +45,11 @@ class CartSide extends Component {
 
         return (
             <React.Fragment>
-                <div className='row'>
-                    <span className='ml-2'>Row</span>
-                    <span className='ml-5'>Place</span>
+                <div className='row justify-content-between'>
+                    <div className='col-md-9 col-7 d-flex justify-content-between'>
+                        <span className=''>Row</span>
+                        <span className=''>Place</span>
+                    </div>
                 </div>
                 <div className='col-12'>
                     {this.seatsRender(seats)}

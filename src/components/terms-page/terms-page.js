@@ -10,7 +10,7 @@ class TermsPage extends Component {
 
         return (
             <div>
-                <div className='row w-100'>
+                <div className='row w-100-wv p-2'>
                     <div className='col-12 d-flex justify-content-center mb-5'>
                         <Link to='/terms' className='link f40'>TERMS AND CONDITIONS</Link>
                     </div>
@@ -181,7 +181,7 @@ class TermsPage extends Component {
                             Hall
                             Foundation. Thus the current German version is solely legally binding.</p>
                         </div>
-                        <div className='d-flex w-100 justify-content-end mb4'>
+                        <div className='d-flex w-100 justify-content-md-end justify-content-center mb4'>
                             <Link to='/registration' className='link-no-style'>
                                 <div className='form-btn form-btn-short mt-5 ' onClick={history.goBack}> Return
                                 </div>

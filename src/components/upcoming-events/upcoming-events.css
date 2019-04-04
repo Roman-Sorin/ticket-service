@@ -87,4 +87,15 @@
         width: 100%;
     }
 
+    .titles-left-bar {
+        text-align: center;
+    }
+
+}
+
+@media (max-width: 350px) {
+    .crop-container-upcoming-events {
+        height: 90px;
+        width: 100%;
+    }
 }
