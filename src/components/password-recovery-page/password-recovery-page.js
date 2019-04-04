@@ -29,7 +29,7 @@ class PasswordRecoveryPage extends Component {
 
         if (passRecovery.success) {
             return (<div className='row w-100  justify-content-center'>
-                    <div className='col-5 d-flex justify-content-center'>
+                    <div className='col-md-5 col-12 d-flex justify-content-center'>
                         <p className='fl-login red-text text-center'>We sent to you new password. Check your email</p>
                     </div>
                     <div className="w-100"/>
@@ -43,7 +43,7 @@ class PasswordRecoveryPage extends Component {
 
         if (passRecovery.error) {
             return (<div className='row w-100  justify-content-center'>
-                    <div className='col-5 d-flex justify-content-center'>
+                    <div className='col-md-5 col-12 d-flex justify-content-center'>
                         <p className='fl-login red-text text-center'>{passRecovery.errorMsg}</p>
                     </div>
                     <div className="w-100"/>
@@ -60,7 +60,7 @@ class PasswordRecoveryPage extends Component {
                 <div className='col-12 d-flex justify-content-center'>
                     <Link to='/recovery' className='link f40'>RECOVERY PASSWORD</Link>
                 </div>
-                <div className="col-5  mt-5">
+                <div className="col-md-5 col-12  mt-5">
                     <p className='fl-login red-text text-center'>We will send new password on your email.</p>
                     <form onSubmit={(e) => {
                         e.preventDefault();

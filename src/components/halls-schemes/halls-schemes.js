@@ -9,7 +9,7 @@ export default class HallsSchemes extends Component {
         return (
             <div className={'row halls-schemes'}>
                 <div className='col-12 d-flex justify-content-center '>
-                    <Link to='/halls-schemes' className='link f40 mr-5'>HALLS SCHEMES</Link>
+                    <Link to='/halls-schemes' className='link f40 mr-md-5'>HALLS SCHEMES</Link>
                 </div>
                 <div id="carouselExampleFade" className="carousel slide carousel-fade" data-ride="carousel">
                     <div className="carousel-inner">

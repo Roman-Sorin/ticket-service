@@ -74,7 +74,7 @@ class RegistrationPage extends Component {
                 <div className='col-12 d-flex justify-content-center'>
                     <Link to='/registration' className='link f40'>REGISTRATION</Link>
                 </div>
-                <form method='POST' onSubmit={
+                <form method='POST' className='d-flex justify-content-center' onSubmit={
                     (e) => {
                         this.props.registrationChangeLoading();
 
@@ -102,11 +102,11 @@ class RegistrationPage extends Component {
                             });
                     }
                 }>
-                    <div className="row justify-content-start registration-page w-100">
-                        <div className="col-6">
+                    <div className="row justify-content-md-start justify-content-center registration-page w-100">
+                        <div className="col-md-6 col-12">
                             <div className='row'>
                                 <div className='col-12'>
-                                    <p className='fl-login'>Salutation and address</p>
+                                    <p className='fl-login text-center text-md-left'>Salutation and address</p>
                                     <div className="input-group input-reg">
                                         <select required ref='gender'
                                                 className="custom-select form-control form-control-reg">
@@ -165,8 +165,8 @@ class RegistrationPage extends Component {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-6">
-                            <p className='fl-login'>Contact information</p>
+                        <div className="col-md-6 col-12">
+                            <p className='fl-login text-center text-md-left'>Contact information</p>
                             <div className='row'>
                                 <div className='col-12'>
                                     <div className="input-group input-reg">

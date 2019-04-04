@@ -64,3 +64,7 @@
 .link-no-style:hover {
     text-decoration-line: none;
 }
+
+@media (max-width: 575px) {
+    
+}

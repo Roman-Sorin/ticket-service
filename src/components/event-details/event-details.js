@@ -57,7 +57,7 @@ class EventDetails extends Component {
 
         let date = new Date(event.eventStart);
         return (
-            <div className='row w-100-wv'>
+            <div className='row w-100-wv '>
                 <div className='col-12 d-flex justify-content-center'>
                     <Link to='/events/' className='link f40'>EVENTS</Link>
                 </div>

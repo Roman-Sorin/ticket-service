@@ -17,7 +17,6 @@
     padding-bottom: 0;
 }
 
-
 .DayPicker-Day--selected {
     -background-color: #07ace8 !important;
 }
@@ -96,7 +95,7 @@
     }
 
     .DayPicker-wrapper {
-        font-size: 22px;
+        font-size: 21px;
     }
 
     .tips-sm {
@@ -110,5 +109,13 @@
 
     .h290 {
         height: 280px;
+    }
+
+    .DayPicker-Month {
+        margin-right: 0;
+    }
+
+    .DayPicker-NavButton--prev {
+        margin-right: 10.5em;
     }
 }

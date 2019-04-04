@@ -7,3 +7,9 @@
 .halls-schemes {
     min-height: 470px;
 }
+
+@media (max-width: 575px) {
+    .halls-schemes {
+        min-height: auto;
+    }
+}

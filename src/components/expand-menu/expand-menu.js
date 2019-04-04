@@ -55,7 +55,7 @@ class ExtendMenu extends Component {
                             </div>
                         </div>
 
-                        <div className="col-4 mt-lg-5 mt-2 d-lg-none cross-sm">
+                        <div className="col-5 mt-lg-5 mt-2 d-lg-none cross-sm">
                             <i className="fa fa-times cross-sm" onClick={this.props.hideMenu}> </i>
                         </div>
 

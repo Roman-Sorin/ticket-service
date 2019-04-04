@@ -14,7 +14,7 @@ export default class Footer extends Component {
                     </Link>
                 </div>
 
-                <div className="col-lg-5 col-6 small-text-footer">
+                <div className="col-lg-5 col-6 small-text-footer pl-5">
                     Berlin City Hall
                     <br/> Freudstasse 69, 10117 Berlin
                     <br/> Tel.: 030 2223344

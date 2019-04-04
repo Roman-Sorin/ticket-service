@@ -76,15 +76,15 @@ class LoginPage extends Component {
         }
 
         return (
-            <div className='row w-100'>
+            <div className='row w-100 justify-content-center'>
                 <div className='col-12 d-flex justify-content-center'>
                     <Link to='/login' className='link f40'>LOGIN</Link>
                 </div>
-                <div className="row justify-content-start login-page">
-                    <div className="col-6">
-                        <p className='fl-login'>I am already a customer</p>
+                <div className="row justify-content-md-start justify-content-center login-page">
+                    <div className="col-md-6 col-12">
+                        <p className='fl-login text-center text-md-left'>I am already a customer</p>
                         <div className='row'>
-                            <div className='col-8'>
+                            <div className='col-md-8 col-12'>
                                 <form onSubmit={
                                     (e) => {
 
@@ -142,8 +142,8 @@ class LoginPage extends Component {
                             </div>
                         </div>
                     </div>
-                    <div className="col-6">
-                        <p className='fl-login'>New customer</p>
+                    <div className="col-12 col-md-6">
+                        <p className='fl-login mt-5 mt-md-0 text-center text-md-left'>New customer</p>
                         <div className='row'>
                             <div className='col-12'>
                                 <Link to='/registration' className='link-no-style '>

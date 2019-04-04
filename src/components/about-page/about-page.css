@@ -25,3 +25,19 @@
     border: #f3f4f4 5px solid;
     font-family: FuturaFuturis-bold, sans-serif;
 }
+
+@media (max-width: 575px) {
+    .cover-blur {
+        max-width: 100vw;
+        height: 280px;
+        background-size: cover;
+    }
+
+    .title-about {
+        text-align: center;
+        padding: 10px;
+        font-size: 20px;
+    }
+
+
+}
