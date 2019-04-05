@@ -8,19 +8,19 @@ export default class Footer extends Component {
         return (
             <React.Fragment>
 
-                <div className="col-lg-3 col-12 mt-4">
+                <div className="col-md-3 col-12 mt-4">
                     <Link to='/'>
                         <img src={logoFooter} alt='logo' className='footer-logo'/>
                     </Link>
                 </div>
 
-                <div className="col-lg-5 col-6 small-text-footer pl-5">
+                <div className="col-md-5 col-6 small-text-footer pl-5">
                     Berlin City Hall
                     <br/> Freudstasse 69, 10117 Berlin
                     <br/> Tel.: 030 2223344
                 </div>
 
-                <div className="col-lg-4 col-6 small-text-footer">
+                <div className="col-md-4 col-6 small-text-footer">
                     Fax.: 030 2223355
                     <br/> Email: info@bch.de<br/>
                     <i className="fa fa-youtube m-1 social-icon"> </i>

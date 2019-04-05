@@ -25,7 +25,7 @@ class SuccessPage extends Component {
         if (Object.keys(event).length === 0) {
             return (
                 <div className='row justify-content-center w-100-wv'>
-                    <h1 className='futuraFuturis mt-5 text-md-left text-center'>Your shopping cart is empty</h1>
+                    <h1 className='futuraFuturis mt-5 text-lg-left text-center'>Your shopping cart is empty</h1>
                     <div className="w-100"/>
                     <img src={emptyCart} alt={'empty cart'} className={'mt-4'} width={64} height={64}/>
                     <div className="w-100"/>
@@ -40,7 +40,7 @@ class SuccessPage extends Component {
         if (this.props.seatsInCart.length === 0) {
             return (
                 <div className='row justify-content-center w-100-wv'>
-                    <h1 className='futuraFuturis mt-5 text-md-left text-center'>Your shopping cart is empty</h1>
+                    <h1 className='futuraFuturis mt-5 text-lg-left text-center'>Your shopping cart is empty</h1>
                     <div className="w-100"/>
                     <img src={emptyCart} alt={'empty cart'} className={'mt-4'} width={64} height={64}/>
                     <div className="w-100"/>
@@ -57,17 +57,17 @@ class SuccessPage extends Component {
                 <div className='col-12 d-flex justify-content-center '>
                     <Link to='/success' className='link f40'>SUCCESS</Link>
                 </div>
-                <div className='row w-100 p-md-4 p-0 m-0 mt-md-4'>
+                <div className='row w-100 p-lg-4 p-0 m-0 mt-lg-4'>
                     <div>
-                        <p className='fl-login text-md-left text-center'>{event.artist} | {event.eventName}
+                        <p className='fl-login text-lg-left text-center'>{event.artist} | {event.eventName}
                             | {date.getDate()} {this.months[date.getMonth()]} {date.getFullYear()}</p>
-                        <div className='row justify-content-between col-md-4 col-12 mt-1'>
+                        <div className='row justify-content-between col-lg-4 col-12 mt-1'>
                             <span className=''>{seats.length} tickets</span>
                             <span className=''>€{totalCost}</span>
                         </div>
                     </div>
                     <div className="w-100"/>
-                    <p className='blue-text mt-5 text-md-left text-center'>
+                    <p className='blue-text mt-5 text-lg-left text-center'>
                         Congratulations! You’ve successfully payed. Your PDF ticket have been sent
                         to your email. We wish you a pleasant time at our Berlin City Hall
                     </p>
@@ -78,7 +78,7 @@ class SuccessPage extends Component {
                         }
                     }>Return to the main page</p>
                     <div className="w-100"/>
-                    <p className='d-flex justify-content-start align-items-center mt-5 pointer futuraFuturis text-md-left text-center' onClick={
+                    <p className='d-flex justify-content-start align-items-center mt-5 pointer futuraFuturis text-lg-left text-center' onClick={
                         () => {
                             alert('DOWNLOADING');
                         }

@@ -64,7 +64,7 @@ class EventDetails extends Component {
 
                 <div className="w-100"/>
 
-                <div className="col-lg-6 col-12 mt-4 poster">
+                <div className="col-sm-6 col-12 mt-4 poster">
                     <img src={event.images[0]} alt='poster' className='w-100-wv'/>
                     <h2 className='eventTitleMain-single'> {event.artist}</h2>
                     <h4 className='eventDescrMain-single'> {event.eventName}</h4>
@@ -73,7 +73,7 @@ class EventDetails extends Component {
                     </h5>
                 </div>
 
-                <div className="col-lg-6 col-12 mt-4 event-description">
+                <div className="col-sm-6 col-12 mt-4 event-description">
                     <h5 className='rightSideMainArtist'>{event.artist}</h5>
                     <p className='rightSideMainDescr'>{event.description}</p>
                     <h5 className='rightSideMainArtist'>Date:

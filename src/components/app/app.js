@@ -34,14 +34,14 @@ class App extends Component {
                 <div className='container'>
                     <div className="row w1200">
 
-                        <div className='col-md-3 col-12 mt-md-5 mt-2 order-md-0 order-1'>
-                            <div className="row justify-content-center mr-md-4 mr-0 ml-0">
+                        <div className='col-lg-3 col-12 mt-lg-5 mt-2 order-lg-0 order-1'>
+                            <div className="row justify-content-center justify-content-md-around mr-lg-4 mr-0 ml-0">
                                 <DayPickerContainer/>
                                 <UpcomingEvents/>
                             </div>
                         </div>
 
-                        <div className="col-md-9 col-12">
+                        <div className="col-lg-9 col-12">
                             <div className="row main-area justify-content-center">
                                 <EventsListContainer/>
                             </div>
@@ -53,7 +53,11 @@ class App extends Component {
                     </div>
                 </div>
                 <div className="row footer-sm justify-content-center">
-                    <Footer/>
+                    <div className='offset-md-1 col-md-8'>
+                        <div className='row justify-content-md-around'>
+                            <Footer/>
+                        </div>
+                    </div>
                 </div>
             </div>
         );

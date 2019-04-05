@@ -1,6 +1,5 @@
 import React, {Component} from "react";
 import './prices.css'
-import {} from "../../actions/actions";
 import {connect} from "react-redux";
 import Spinner from "../spinner/spinner";
 

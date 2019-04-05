@@ -35,6 +35,18 @@ body {
     background: #fafafa;
 }
 
+@media (max-width: 991px) {
+
+    .media-md-none {
+        display: none;
+    }
+
+    .media-md-block {
+        display: block;
+    }
+}
+
+
 @media (max-width: 575px) {
     * {
         max-width: 100vh;

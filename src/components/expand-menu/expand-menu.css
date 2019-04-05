@@ -52,6 +52,41 @@
     font-family: 'DINPro-Light', sans-serif;
 }
 
+@media (max-width: 991px) {
+    .menuList {
+        padding-left: 0;
+    }
+
+    .cross-sm {
+        margin-top: 70px;
+        font-size: 65px;
+        text-align: right;
+    }
+
+    .menuList {
+        margin-top: 20px;
+        text-align: center;
+        font-size: 25px;
+        width: 100%;
+    }
+
+    .extendMenu {
+        height: 455px;
+        padding-left: 0;
+        padding-right: 0;
+
+    }
+
+    .menuList > li {
+        margin-bottom: 12px !important;
+    }
+
+    .event-list-component {
+        padding: 0;
+    }
+
+}
+
 
 @media (max-width: 575px) {
     .menuList {
@@ -75,7 +110,6 @@
         height: 375px;
         padding-left: 0;
         padding-right: 0;
-
     }
 
     .menuList > li {

@@ -102,11 +102,11 @@ class RegistrationPage extends Component {
                             });
                     }
                 }>
-                    <div className="row justify-content-md-start justify-content-center registration-page w-100">
-                        <div className="col-md-6 col-12">
+                    <div className="row justify-content-lg-start justify-content-center registration-page w-100">
+                        <div className="col-lg-6 col-12">
                             <div className='row'>
                                 <div className='col-12'>
-                                    <p className='fl-login text-center text-md-left'>Salutation and address</p>
+                                    <p className='fl-login text-center text-lg-left'>Salutation and address</p>
                                     <div className="input-group input-reg">
                                         <select required ref='gender'
                                                 className="custom-select form-control form-control-reg">
@@ -165,8 +165,8 @@ class RegistrationPage extends Component {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-md-6 col-12">
-                            <p className='fl-login text-center text-md-left'>Contact information</p>
+                        <div className="col-lg-6 col-12">
+                            <p className='fl-login text-center text-lg-left'>Contact information</p>
                             <div className='row'>
                                 <div className='col-12'>
                                     <div className="input-group input-reg">

@@ -26,13 +26,12 @@ class ExtendMenu extends Component {
             <div className={clas}>
                 <div className="container">
                     <div className="row">
-
                         <div className="col-lg-3 col-7 mt-1 mt-lg-5">
-                            <Link to='/'><img src={logo} alt='logo' className='mr-0 mr-lg-5'
-                                              onClick={this.props.hideMenu}/></Link>
+                            <Link to='/'>
+                                <img src={logo} alt='logo' className='mr-0 mr-lg-5' onClick={this.props.hideMenu}/>
+                            </Link>
                         </div>
-
-                        <div className="col-6 media-sm-none">
+                        <div className="col-6 media-sm-none media-md-none">
                             <div className="row">
                                 <span className='mt-3'>Berlin City Hall | Events and Tickets</span>
                             </div>
@@ -78,7 +77,7 @@ class ExtendMenu extends Component {
                                 </ul>
                             </div>
                         </div>
-                        <div className="col-1 mt-lg-5 media-sm-none">
+                        <div className="col-1 mt-lg-5 media-sm-none media-md-none">
                             <i className="fa fa-times cross" onClick={this.props.hideMenu}> </i>
                         </div>
                     </div>

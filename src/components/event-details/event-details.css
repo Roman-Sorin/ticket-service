@@ -73,8 +73,61 @@
     font-size: 30px;
 }
 
+@media (max-width: 1199px) {
+    .poster > img {
+        max-width: 30vw;
+    }
+
+    .buy-ticket-btn {
+        width: 100%;
+    }
+
+    .eventTitleMain-single, .eventDescrMain-single {
+        max-width: 25vw;
+    }
+
+    .dateMain-single {
+        right: 10vw;
+        top: 1vw;
+    }
+}
+
+
+@media (max-width: 991px) {
+    .poster > img {
+        max-width: 35vw;
+    }
+
+    .poster {
+        justify-content: center;
+        align-content: center;
+    }
+
+    .buy-ticket-btn {
+        width: 100%;
+    }
+
+    .eventTitleMain-single, .eventDescrMain-single {
+        max-width: 30vw;
+    }
+
+    .dateMain-single {
+        right: 15vw;
+        top: 1vw;
+    }
+
+
+}
+
+
 @media (max-width: 575px) {
-    .event-description {
+    .dateMain-single {
+        right: 30px;
+        top: 15px;
+    }
+
+
+    .event-description, .eventTitleMain-single, .eventDescrMain-single {
         max-width: 100vw;
     }
 
@@ -84,6 +137,10 @@
 
     .poster {
         padding: 0;
+    }
+
+    .poster > img {
+        max-width: 100vw;
     }
 
     .rightSideMainArtist {

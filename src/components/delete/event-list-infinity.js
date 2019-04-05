@@ -4,8 +4,6 @@ import {
     eventsLoaded,
     eventsRequest,
     eventsShowError,
-    changePage,
-    changeMorePageStatus,
     resetCalender,
     setTotalCount
 } from "../../actions/actions";
@@ -151,8 +149,6 @@ const mapDispatchToProps = {
     eventsRequest,
     eventsLoaded,
     eventsShowError,
-    changePage,
-    changeMorePageStatus,
     resetCalender,
     setTotalCount
 };

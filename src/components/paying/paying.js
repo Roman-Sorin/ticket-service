@@ -21,7 +21,7 @@ class Paying extends Component {
         if (Object.keys(event).length === 0) {
             return (
                 <div className='row justify-content-center w-100-wv'>
-                    <h1 className='futuraFuturis mt-5 text-md-left text-center'>Your shopping cart is empty</h1>
+                    <h1 className='futuraFuturis mt-5 text-lg-left text-center'>Your shopping cart is empty</h1>
                     <div className="w-100"/>
                     <img src={emptyCart} alt={'empty cart'} className={'mt-4'} width={64} height={64}/>
                     <div className="w-100"/>
@@ -36,7 +36,7 @@ class Paying extends Component {
         if (this.props.seatsInCart.length === 0) {
             return (
                 <div className='row justify-content-center w-100-wv'>
-                    <h1 className='futuraFuturis mt-5 text-md-left text-center'>Your shopping cart is empty</h1>
+                    <h1 className='futuraFuturis mt-5 text-lg-left text-center'>Your shopping cart is empty</h1>
                     <div className="w-100"/>
                     <img src={emptyCart} alt={'empty cart'} className={'mt-4'} width={64} height={64}/>
                     <div className="w-100"/>
@@ -54,11 +54,11 @@ class Paying extends Component {
                 <div className='col-12 d-flex justify-content-center '>
                     <Link to='/paying' className='link f40'>PAYING</Link>
                 </div>
-                <div className='row border-cart p-4 mt-md-4 m-0 w-100-wv justify-content-center'>
+                <div className='row border-cart p-4 mt-lg-4 m-0 w-100-wv justify-content-center'>
                     <div>
-                        <p className='fl-login ml-md-3 mx-0 text-md-left text-center'>{event.artist} | {event.eventName}
+                        <p className='fl-login ml-lg-3 mx-0 text-lg-left text-center'>{event.artist} | {event.eventName}
                             | {date.getDate()} {this.months[date.getMonth()]} {date.getFullYear()}</p>
-                        <div className='row justify-content-between col-md-4 col-12 mt-1'>
+                        <div className='row justify-content-between col-lg-4 col-12 mt-1'>
                             <span className=''>{seats.length} tickets</span>
                             <span className=''>€{totalCost}</span>
                         </div>
@@ -74,7 +74,7 @@ class Paying extends Component {
                                 <input required type='radio' name="payment-method"/>
                                 <i className="fa fa-cc-paypal ml-2"/></label>
                             <div className="w-100"/>
-                            <div className='row w-100 justify-content-md-end justify-content-center'>
+                            <div className='row w-100 justify-content-lg-end justify-content-center'>
                                 <button type='submit' className='form-btn pay-btn-paying'> PAY
                                 </button>
                             </div>

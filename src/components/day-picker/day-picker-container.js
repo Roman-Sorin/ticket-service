@@ -63,7 +63,7 @@ class DayPickerContainer extends Component {
                     modifiers={modifiers}
                     onDayClick={this.handleDayClick}
                 />
-                <div className='ml-3 tips tips-lg order-0 order-lg-1'>
+                <div className='ml-3 ml-md-0 tips tips-lg order-0 order-lg-1'>
                     {!from && !to && (
                         <div>
 

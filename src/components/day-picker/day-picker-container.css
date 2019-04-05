@@ -85,6 +85,10 @@
     border-bottom-right-radius: 50% !important;
 }
 
+@media (max-width: 991px) {
+
+}
+
 
 @media (max-width: 575px) {
 

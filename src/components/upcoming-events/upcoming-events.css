@@ -64,6 +64,15 @@
     color: #868685;
 }
 
+@media (max-width: 991px) {
+
+    .upcomming-datapicker-container{
+
+    }
+
+}
+
+
 @media (max-width: 575px) {
 
     .crop-container-upcoming-events {
