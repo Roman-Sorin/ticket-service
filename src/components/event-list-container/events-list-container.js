@@ -1,7 +1,6 @@
 import React, {Component} from "react";
 import './events-list-container.css';
 import EventList from "../event-list/event-list";
-import EventListInfinity from "../delete/event-list-infinity"
 import EventDetails from "../event-details/event-details";
 import {Route, Switch} from "react-router-dom";
 import {withRouter} from "react-router-dom";
@@ -26,7 +25,7 @@ class EventsListContainer extends Component {
                     <Switch>
                         <Route exact path='/' render={() => {
                             return (
-                                <EventListInfinity onItemSelected={(id) => {
+                                <EventList onItemSelected={(id) => {
                                     history.push(`/events/${id}`)
                                 }}/>
                             );
@@ -34,13 +33,13 @@ class EventsListContainer extends Component {
 
                         <Route exact path='/events/' render={() => {
                             return (
-                                <EventListInfinity onItemSelected={(id) => {
+                                <EventList onItemSelected={(id) => {
                                     history.push(`/events/${id}`)
                                 }}/>
                             );
                         }}/>
 
-                        <Route exact path='/events/:id' render={({match, location, history}) => {
+                        <Route exact path='/events/:id' render={({match}) => {
                             return (
                                 <EventDetails id={match.params.id}/>
                             );
@@ -52,7 +51,7 @@ class EventsListContainer extends Component {
 
                         <Route path='/terms' component={TermsPage}/>
 
-                        <Route path='/events/:id/tickets' render={({match, location, history}) => {
+                        <Route path='/events/:id/tickets' render={({match}) => {
                             return (
                                 <Tickets id={match.params.id}/>
                             );

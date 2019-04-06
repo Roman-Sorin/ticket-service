@@ -18,7 +18,6 @@
 }
 
 .DayPicker-Day--selected {
-    -background-color: #07ace8 !important;
 }
 
 .fa-arrow-down, .fa-arrow-up {
@@ -85,12 +84,25 @@
     border-bottom-right-radius: 50% !important;
 }
 
-@media (max-width: 991px) {
+@media (max-width: 767px) {
+
+    .DayPicker-Month {
+        margin-left: 10%;
+    }
+
+    .tips {
+        margin-left: -10% !important;
+    }
+
 
 }
 
 
 @media (max-width: 575px) {
+
+    .tips {
+        margin-left: 0 !important;
+    }
 
     .RangeExample {
         display: flex;

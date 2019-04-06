@@ -7,14 +7,15 @@ export default class AboutPage extends Component {
         return (
             <div className='row justify-content-center w-100-wv'>
                 <div className='col-12 d-flex justify-content-center '>
-                    <Link to='/halls-schemes' className='link f40'>ABOUT US</Link>
+                    <Link to='/about' className='link f40'>ABOUT US</Link>
                 </div>
 
                 <p className='cover-blur'>
                     <span className='title-about'>Berlin City Hall | Events and Tickets</span>
                 </p>
 
-                <p className='p-2'>At Berlin City Hall | Events and Tickets, we strive to put fans first. Every day we're listening to
+                <p className='p-2'>At Berlin City Hall | Events and Tickets, we strive to put fans first. Every day
+                    we're listening to
                     your feedback and working to
                     improve your experience before, during, and after events.
                 </p>

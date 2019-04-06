@@ -35,7 +35,7 @@ class App extends Component {
                     <div className="row w1200">
 
                         <div className='col-lg-3 col-12 mt-lg-5 mt-2 order-lg-0 order-1'>
-                            <div className="row justify-content-center justify-content-md-around mr-lg-4 mr-0 ml-0">
+                            <div className="row justify-content-center justify-content-md-around mr-lg-4 mr-0 ml-0 upcomming-datapicker-container">
                                 <DayPickerContainer/>
                                 <UpcomingEvents/>
                             </div>

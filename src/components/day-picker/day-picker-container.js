@@ -33,22 +33,18 @@ class DayPickerContainer extends Component {
                 <div className='ml-3 tips tips-sm order-0 order-lg-1'>
                     {!from && !to && (
                         <div>
-
                             <div className="w-100"/>
                             <span> Select the <span className=''>first</span> day for searching events.</span>
                             <i className="fa fa-arrow-down w-100"/>
                         </div>)}
-
                     {from && !to && (
                         <div>
                             <div className="w-100"/>
                             <span> Select the <span className=''>last</span> day for searching events.</span>
                             <i className="fa fa-arrow-down w-100"/>
                         </div>)}
-
                     {from && to && `Events from ${from.toLocaleDateString()} to
                         ${to.toLocaleDateString()}`}{' '}
-
                     {from &&
                     to && (
                         <div className="form-btn" onClick={this.handleResetClick}>
@@ -66,7 +62,6 @@ class DayPickerContainer extends Component {
                 <div className='ml-3 ml-md-0 tips tips-lg order-0 order-lg-1'>
                     {!from && !to && (
                         <div>
-
                             <div className="w-100"/>
                             <span> Select the <span className=''>first</span> day for searching events.</span>
                             <i className="fa fa-arrow-up w-100"/>

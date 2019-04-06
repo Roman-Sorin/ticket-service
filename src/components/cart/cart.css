@@ -36,6 +36,19 @@
     bottom: 10px;
 }
 
+@media (max-width: 991px) {
+    .pos-cart-agreement {
+        margin-top: 15px;
+    }
+}
+
+@media (max-width: 767px) {
+    .pos-cart-agreement {
+        margin-top: 15px;
+        position: relative;
+    }
+}
+
 @media (max-width: 575px) {
     .pos-cart-agreement {
         margin-top: 15px;

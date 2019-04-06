@@ -173,7 +173,7 @@ class RegistrationPage extends Component {
                                         <input required ref='inputLogin' type="email"
                                                className="form-control form-control-reg"
                                                pattern="[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
-                                               title='"Email format is incorrect"'
+                                               title='Email format: example@mail.com'
                                                placeholder="Email*"
                                                aria-label="Email" aria-describedby="basic-addon1"/>
                                     </div>
