@@ -181,6 +181,7 @@ class TermsPage extends Component {
                             Hall
                             Foundation. Thus the current German version is solely legally binding.</p>
                         </div>
+
                         <div className='d-flex w-100 justify-content-lg-end justify-content-center mb4'>
                             <Link to='/registration' className='link-no-style'>
                                 <div className='form-btn form-btn-short mt-5 ' onClick={history.goBack}> Return

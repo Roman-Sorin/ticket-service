@@ -14,6 +14,7 @@ import AboutPage from "../about-page/about-page";
 import Paying from "../paying/paying";
 import SuccessPage from "../success-page/success-page";
 import PasswordRecoveryPage from "../password-recovery-page/password-recovery-page";
+import EmailConfirmationPage from "../email-confirmation-page/email-confirmation-page";
 
 class EventsListContainer extends Component {
 
@@ -68,6 +69,13 @@ class EventsListContainer extends Component {
                         <Route path='/success' component={SuccessPage}/>
 
                         <Route path='/recovery' component={PasswordRecoveryPage}/>
+
+                        <Route path='/user/:hash' render={({match}) => {
+                            return (<EmailConfirmationPage hash={match.params.hash}/>
+                            );
+                        }}/>
+
+                        <Route render={() => <h2 className='my-5'>Page not found</h2>}/>
 
                     </Switch>
                 </div>

@@ -1,5 +1,5 @@
-/*eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsIm5iZiI6MTU1Mzg4ODA0MywiZXhwIjoxNTU0NDkyODQzfQ.ygwgMXIZDAPGxH8jPAME69W6aFoUeln9_6KpUN4R6dE*/ /*admin@gmail.com*/
-/*eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6InJvbWEtc3BzQHlhbmRleC5ydSIsIm5iZiI6MTU1Mzc3NDgzNiwiZXhwIjoxNTU0Mzc5NjM2fQ.yTrtWXkgW6kZ_oWdDB376eJbd1L__eME757uTYMa0lQ*/ /*roma-sps@yandex.ru*/
+/*eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsIm5iZiI6MTU1NDcxNzU5MiwiZXhwIjoxNTU1MzIyMzkyfQ.CpRYYqE1m0jfw_HApV1-iPa445BNYoOa1574p0T8jic*/ /*admin@gmail.com*/
+/*eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6InJvbWEtc3BzQHlhbmRleC5ydSIsIm5iZiI6MTU1NDcxNzY0NywiZXhwIjoxNTU1MzIyNDQ3fQ.n2USAu_MKZc3rO5geD-TKvozqym0-_v44dp4kFnY4J0*/ /*roma-sps@yandex.ru*/
 /*eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6InVzZXJAZ21haWwuY29tIiwibmJmIjoxNTUzNzc1MDE3LCJleHAiOjE1NTQzNzk4MTd9.NIXNun4vDSZrOrzU_CSZP081fWJJ5FucfrCVzVKraiA*/ /*user@gmail.com*/
 
 let price_hall_1 = {
@@ -57,8 +57,6 @@ let price_hall_1 = {
         }
     ]
 };
-
-
 let price_hall_2 = {
     "priceRanges": [
         {
@@ -239,8 +237,6 @@ let price_hall_2 = {
         }
     ]
 };
-
-
 let events = [
     {
         "eventId": "5ca0e6872a28940004edfc56",

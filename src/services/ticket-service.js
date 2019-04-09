@@ -485,5 +485,19 @@ export default class TicketService {
 
             throw new Error(`${json.message} ${errorMsg}`);
         }
+    };
+
+    emailConfirm = async (hash) => {
+
+        let response = await fetch(`${this._baseUrl}/user/${hash}`, {
+            method: "GET",
+            headers: {
+                "Content-type": "application/json"
+            }
+        });
+        if (!response.ok) {
+            throw new Error('Something wrong with confirmation');
+        }
+
     }
 }
