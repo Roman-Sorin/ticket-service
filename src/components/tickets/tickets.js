@@ -46,10 +46,10 @@ class Tickets extends Component {
                 <p className='fl-login text-center text-lg-left'>{event.artist} | {event.eventName}
                     | {date.getDate()} {this.months[date.getMonth()]} {date.getFullYear()}</p>
                 <div className="row justify-content-between mt-2 w-100-wv mx-0">
-                    <div className="col-lg-8 hall-container w-100-wv">
+                    <div className="col-xl-8 hall-container w-100-wv">
                         <Hall hall={event.hall}/>
                     </div>
-                    <div className="col-lg-3 cart-container w-100-wv">
+                    <div className="col-xl-3 cart-container w-100-wv">
                         <Prices/>
                         <CartSide/>
                     </div>

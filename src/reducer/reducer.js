@@ -127,12 +127,12 @@ export const reducer = (state = initialState, action) => {
                 eventsError: true,
                 eventsLoading: false
             };
+
         case "FETCH_TOTAL_COUNT":
             return {
                 ...state,
                 totalCount: action.payload
             };
-
 
         case 'EVENT_REQUEST':
             return {

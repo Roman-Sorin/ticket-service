@@ -18,7 +18,7 @@ class Place extends Component {
         if (isRow === -1) {
             return false;
         }
-        let index = arr[isRow].sseats.findIndex((item) => {
+        let index = arr[isRow].seats.findIndex((item) => {
             return item === seat;
         });
         return index >= 0;

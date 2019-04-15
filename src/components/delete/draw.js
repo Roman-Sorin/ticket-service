@@ -1,5 +1,5 @@
 /*eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsIm5iZiI6MTU1NDcxNzU5MiwiZXhwIjoxNTU1MzIyMzkyfQ.CpRYYqE1m0jfw_HApV1-iPa445BNYoOa1574p0T8jic*/ /*admin@gmail.com*/
-/*eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6InJvbWEtc3BzQHlhbmRleC5ydSIsIm5iZiI6MTU1NDcxNzY0NywiZXhwIjoxNTU1MzIyNDQ3fQ.n2USAu_MKZc3rO5geD-TKvozqym0-_v44dp4kFnY4J0*/ /*roma-sps@yandex.ru*/
+/*eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6InJvbWEtc3BzQHlhbmRleC5ydSIsIm5iZiI6MTU1NTMyNDI0MywiZXhwIjoxNTU1OTI5MDQzfQ.6oM_RxiiZIlNTXead-cyZAj6h4a6HSlE7iWm_u0kJ7c*/ /*roma-sps@yandex.ru*/
 /*eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6InVzZXJAZ21haWwuY29tIiwibmJmIjoxNTUzNzc1MDE3LCJleHAiOjE1NTQzNzk4MTd9.NIXNun4vDSZrOrzU_CSZP081fWJJ5FucfrCVzVKraiA*/ /*user@gmail.com*/
 
 let price_hall_1 = {
@@ -134,7 +134,7 @@ let pricE_hall_1_drawn = {
                     "1L", "2L", "3L", "4L", "5L", "6L", "7L", "8L", "9L", "10L", "9R", "8R", "7R", "6R", "5R", "4R", "3R", "2R", "1R"
                 ]
             },
-            "price": 160,
+            "price": 250,
             "color": "#faedac"
         },
         {
@@ -149,7 +149,7 @@ let pricE_hall_1_drawn = {
                     "1L", "2L", "3L", "4L", "5L", "6L", "7L", "8L", "9L", "10L", "11L", "11R", "10R", "9R", "8R", "7R", "6R", "5R", "4R", "3R", "2R", "1R"
                 ]
             },
-            "price": 100,
+            "price": 200,
             "color": "#fbdada"
         },
         {
@@ -169,7 +169,7 @@ let pricE_hall_1_drawn = {
         }
     ]
 };
-let price_hall_2 = {
+let price_hall_2_drawn = {
     "priceRanges": [
         {
             "seats": {
@@ -224,7 +224,13 @@ let price_hall_2 = {
                 ],
                 "13": [
                     "1L", "2L", "3L", "4L", "5L", "6L", "7L", "8L", "9L", "10L", "11L", "12L", "13L", "14L", "15L", "16L", "17L", "16R", "15R", "14R", "13R", "12R", "11R", "10R", "9R", "8R", "7R", "6R", "5R", "4R", "3R", "2R", "1R"
-                ],
+                ]
+            },
+            "price": 100,
+            "color": "#d8f0c3"
+        },
+        {
+            "seats": {
                 "14": [
                     "1L", "2L", "3L", "4L", "5L", "6L", "7L", "8L", "9L", "10L", "11L", "12L", "13L", "14L", "15L", "16L", "16R", "15R", "14R", "13R", "12R", "11R", "10R", "9R", "8R", "7R", "6R", "5R", "4R", "3R", "2R", "1R"
                 ],
@@ -232,8 +238,8 @@ let price_hall_2 = {
                     "1L", "2L", "3L", "4L", "5L", "6L", "7L", "8L", "9L", "10L", "11L", "12L", "11R", "10R", "9R", "8R", "7R", "6R", "5R", "4R", "3R", "2R", "1R"
                 ]
             },
-            "price": 100,
-            "color": "#d8f0c3"
+            "price": 120,
+            "color": "#ffd9b0"
         }
     ]
 };

@@ -658,10 +658,10 @@ class Hall extends Component {
                                         <Place row={7} seat={'16L'} place={16}/>
                                         <Place row={7} seat={'17L'} place={17}/>
                                         <Place row={7} seat={'18L'} place={18}/>
-                                        <Place row={7} seat={'18R'} place={18}/>
                                         <Place row={7} seat={'19L'} place={19}/>
                                         <Place row={7} seat={'20L'} place={20}/>
                                         <Place row={7} seat={'19R'} place={19}/>
+                                        <Place row={7} seat={'18R'} place={18}/>
                                         <Place row={7} seat={'17R'} place={17}/>
                                         <Place row={7} seat={'16R'} place={16}/>
                                         <Place row={7} seat={'15R'} place={15}/>
@@ -682,13 +682,13 @@ class Hall extends Component {
                                         <Place row={8} seat={'16L'} place={16}/>
                                         <Place row={8} seat={'17L'} place={17}/>
                                         <Place row={8} seat={'18L'} place={18}/>
-                                        <Place row={8} seat={'18R'} place={18}/>
                                         <Place row={8} seat={'19L'} place={19}/>
                                         <Place row={8} seat={'20L'} place={20}/>
                                         <Place row={8} seat={'21L'} place={21}/>
                                         <Place row={8} seat={'21R'} place={21}/>
                                         <Place row={8} seat={'20R'} place={20}/>
                                         <Place row={8} seat={'19R'} place={19}/>
+                                        <Place row={8} seat={'18R'} place={18}/>
                                         <Place row={8} seat={'17R'} place={17}/>
                                         <Place row={8} seat={'16R'} place={16}/>
                                         <Place row={8} seat={'15R'} place={15}/>
@@ -707,7 +707,6 @@ class Hall extends Component {
                                         <Place row={9} seat={'16L'} place={16}/>
                                         <Place row={9} seat={'17L'} place={17}/>
                                         <Place row={9} seat={'18L'} place={18}/>
-                                        <Place row={9} seat={'18R'} place={18}/>
                                         <Place row={9} seat={'19L'} place={19}/>
                                         <Place row={9} seat={'20L'} place={20}/>
                                         <Place row={9} seat={'21L'} place={21}/>
@@ -715,6 +714,7 @@ class Hall extends Component {
                                         <Place row={9} seat={'21R'} place={21}/>
                                         <Place row={9} seat={'20R'} place={20}/>
                                         <Place row={9} seat={'19R'} place={19}/>
+                                        <Place row={9} seat={'18R'} place={18}/>
                                         <Place row={9} seat={'17R'} place={17}/>
                                         <Place row={9} seat={'16R'} place={16}/>
                                         <Place row={9} seat={'15R'} place={15}/>
@@ -1054,8 +1054,7 @@ const mapStateToProps = (state) => {
         seatsInCart: state.seatsInCart,
         event: state.event,
         hallStructureForEvent: state.hallStructureForEvent,
-        hallStructure2ForEvent: state.hallStructure2ForEvent,
-
+        hallStructure2ForEvent: state.hallStructure2ForEvent
     }
 };
 
