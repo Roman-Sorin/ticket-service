@@ -1,6 +1,6 @@
 export default class TicketService {
 
-    _baseUrl = 'https://ticketserviceapp.herokuapp.com';
+    _baseUrl = 'https://ticket-service-app.herokuapp.com';
     dataUpcomingEvents = [
         {
             "artist": "Eurovision",
